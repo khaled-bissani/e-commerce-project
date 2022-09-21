@@ -13,3 +13,42 @@ body{
     text-align: center;
     padding: 7px 0;
 }
+
+/* the actions section */
+.actions{
+    display: flex;
+}
+
+.logo-div{
+    flex: 2;
+    display: flex;
+}
+
+.landing-btn-container{
+    flex: 1;
+    display: flex;
+    margin: 10px 10px;
+}
+
+.align-span{
+    flex: 1;
+
+}
+
+.landing-btns-class{
+    flex: 0.5;
+}
+
+.action-btn{
+    margin-right: 10px;
+    color: white;
+    background-color: rgba(5, 131, 210, 1);
+    border-style: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+}
+
+
+.ecommerce-name{
+    color: rgba(5, 131, 210, 1);
+}
