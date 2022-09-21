@@ -139,3 +139,10 @@ body{
     padding: 1vh 0;
     margin: 5px 3vw;
 }
+
+/* footer */
+.landing-footer{
+    background-color: rgba(5, 131, 210, 1);
+    text-align: center;
+    padding: 7vh 0 1vh 0;
+}
