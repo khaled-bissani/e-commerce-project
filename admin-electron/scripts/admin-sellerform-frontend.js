@@ -36,7 +36,7 @@ close_edit.addEventListener('click',()=>{
 const table_seller=document.querySelector('#table-seller');
 
 //create a new row
-for(let i=0;i<5;i++){ 
+for(let i=0;i<15;i++){ 
     let tempalte=`
     <tr>
         <td><img class='table-image' src=''></td>

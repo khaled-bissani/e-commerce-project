@@ -2,7 +2,7 @@
 const table=document.querySelector('#table');
 
 //create a new row
-for(let i=0;i<5;i++){ 
+for(let i=0;i<8;i++){ 
     let tempalte=`
     <tr>
         <td><img class='table-image' src=''></td>
