@@ -1,9 +1,28 @@
+const go_dashboard=document.querySelector('#to-dashboard');
+const go_client=document.querySelector('#to-client');
+const dashboard=document.querySelector('#dashboard');
+const client_form=document.querySelector('#client-form');
+
+//open dashboard-from
+go_dashboard.addEventListener('click',()=>{
+  dashboard.style.display='block';
+  client_form.style.display='none';    
+})
+
+//open client-form
+go_client.addEventListener('click',()=>{
+  client_form.style.display='block';
+  dashboard.style.display='none';    
+})
+
+
 //specify d3 element attributes
 const width = 800;
 const height = 400;
 const margin = { top: 30, bottom: 30, left: 65, right: 30 };
 
-//create d3 element
+
+//create d3 element - histogram sellers
 /*const svg = d3.select('#seller-histogram')
   .append('svg')
   .attr('width', width)
@@ -53,5 +72,6 @@ const xAxis=(g) =>{
 svg.append("g").call(xAxis);
 svg.append("g").call(yAxis);
 svg.node();
+
 
 

@@ -10,25 +10,25 @@
     <body>
         <div class="panel">
             <div class="panel links">
-                <a href="">
+                <a id="to-dashboard">
                     <i class="fa fa-dashboard"></i>
                     <span class="links-name">Dashboard</span>
                 </a>
-                <a href="">
+                <a id="to-client">
                     <i class="fa fa-user"></i>
                     <span class="links-name">Clients</span>
                 </a>
-                <a href="">
+                <a id="to-seller">
                     <i class="fa-sharp fa-solid fa-store"></i>
                     <span class="links-name">Sellers</span>
                 </a>
             </div>
         </div>
-        <div class="admin-section" id="dashboard">
+        <div class="admin-section dashboard" id="dashboard">
             <div class="section-title">
                 <h1 class="title">Dashboard</h1>
             </div>
-            <div class="section-dashboard">
+            <div class="section">
                 <div class="graph">
                     <div class="graph-item" id="best-sellers">
                         <h1 class="title dashboard-title">Best Sellers</h1>
@@ -64,6 +64,19 @@
                 </div> 
             </div>
         </div>
-        <script src="scripts/admin-frontend.js"></script>     
+        <div class="admin-section clients" id="client-form">
+            <div class="section-title">
+                <h1 class="title">Clients</h1>
+            </div>
+            <div class="section">
+                <div class="client-id">
+                    <input type="text" class="input-id" placeholder="Client ID">
+                    <button class="ban-button">Ban</button>
+                </div>   
+                <div class="results">
+                </div>
+            </div>
+        </div>    
+        <script src="scripts/admin-frontend.js"></script>
     </body>
 </html>
