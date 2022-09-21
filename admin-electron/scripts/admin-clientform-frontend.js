@@ -1,5 +1,5 @@
 //connect the table
-let table=document.querySelector('#table');
+const table=document.querySelector('#table');
 
 //create a new row
 for(let i=0;i<5;i++){ 

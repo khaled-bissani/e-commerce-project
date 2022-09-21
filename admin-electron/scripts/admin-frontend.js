@@ -1,18 +1,29 @@
 const go_dashboard=document.querySelector('#to-dashboard');
 const go_client=document.querySelector('#to-client');
+const go_seller=document.querySelector('#to-seller');
 const dashboard=document.querySelector('#dashboard');
 const client_form=document.querySelector('#client-form');
+const seller_form=document.querySelector('#seller-form');
 
 //open dashboard-from
 go_dashboard.addEventListener('click',()=>{
   dashboard.style.display='block';
-  client_form.style.display='none';    
+  client_form.style.display='none';
+  seller_form.style.display='none';    
 })
 
 //open client-form
 go_client.addEventListener('click',()=>{
   client_form.style.display='block';
-  dashboard.style.display='none';    
+  dashboard.style.display='none';  
+  seller_form.style.display='none';  
+})
+
+//open seller-form
+go_seller.addEventListener('click',()=>{
+  seller_form.style.display='block';
+  dashboard.style.display='none';  
+  client_form.style.display='none';  
 })
 
 

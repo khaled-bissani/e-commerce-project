@@ -51,6 +51,11 @@
     display: none;
 }
 
+.sellers{
+    display: none;
+}
+
+
 .title{
     font-size: 40px;
     color: #2565AE;
@@ -133,8 +138,8 @@
     pointer-events: none;
 }
 
-.ban-button{
-    width: 12%;
+.button{
+    width: 14%;
     height: 50px;
     font-size: 20px;
     background-color: #2565AE;
