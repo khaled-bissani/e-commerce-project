@@ -4,13 +4,13 @@ const signup_nav = document.getElementById("signup-btn");
 const login_span = document.getElementById("login-span");
 const signup_span = document.getElementById("signup-span");
 
-login_nav.addEventListener("click", showLogin);
+// login_nav.addEventListener("click", showLogin);
 
+// fct to make the login div appear the signup div disappear
 function showLogin(){
     const signin_div = document.getElementsByClassName("signin-div");
     const signup_div = document.getElementsByClassName("signup-form-div");
-    signup_div[0].style.display = "none";
-    console.log(signin_div);
-    console.log(signup_div);
-}
+    signup_div[0].classList.add('no-display');
 
+}
+login_nav.addEventListener("click", showLogin);

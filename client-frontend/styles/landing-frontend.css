@@ -168,6 +168,11 @@ body{
     cursor: pointer;
     text-decoration: underline;
 }
+
+.no-display{
+    display: none;
+}
+
 /* responsiveness */
 
 @media screen and (max-width: 950px){
