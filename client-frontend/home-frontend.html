@@ -6,15 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page</title>
         <link rel="stylesheet" href="styles/home-frontend.css">
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     </head>
     <body>
         <!-- Nav bar section -->
-        <nav>
+        <nav class="container">
             <label class="ecommerce-name" >E-commerce</label>
             <ul>
                 <li><a class="active" href="#">Home</a></li>
                 <li><a href="#">Profile</a></li>
-                <li><button>Search</button></li>
+                <li>
+                    <div class="search-button">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="Search" id="home-search-btn" ></input>
+                    </div>
+                </li>
             </ul>
         </nav>
         
