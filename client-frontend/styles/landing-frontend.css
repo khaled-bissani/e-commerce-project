@@ -85,7 +85,7 @@ body{
     text-align: center;
     padding: 1vh 0;
     margin: 5px 3vw;
-    display: none;
+    /* display: none; */
 }
 
 .frm{
@@ -138,6 +138,7 @@ body{
     text-align: center;
     padding: 1vh 0;
     margin: 5px 3vw;
+    display: none;
 }
 
 /* footer */
@@ -145,4 +146,38 @@ body{
     background-color: rgba(5, 131, 210, 1);
     text-align: center;
     padding: 7vh 0 1vh 0;
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 950px){
+
+    .logo-img-container{
+        width: 20%;
+    }
+
+    .actions{
+        display: block;
+        width: 100%;
+        align-items: center;
+    }
+
+    .landing-btn-container{
+        display: block;
+    }
+
+    .landing-btns-class{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .landing-main{
+        display: block;
+        width: 100%;
+        margin: 5px 5px 5px -2px;
+        align-items: center;
+    }
+    .ad-description{
+        margin: 1vh 0 3vh 0;
+    }
 }
