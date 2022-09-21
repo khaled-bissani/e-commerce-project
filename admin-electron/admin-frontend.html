@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
         <title>Admin</title>
     </head>
     <body>
@@ -29,15 +30,16 @@
             </div>
             <div class="section-dashboard">
                 <div class="graph">
-                    <div class="graph-item">
+                    <div class="graph-item" id="best-sellers">
                         <h1 class="title dashboard-title">Best Sellers</h1>
                         <select class="select">
                             <option>Week</option>
                             <option>Month</option>
                             <option>Year</option>
                         </select>
+                        <div class="seller-histogram" id="seller-histogram"></div>
                     </div>
-                    <div class="graph-item">
+                    <div class="graph-item" id="top-clients">
                         <h1 class="title dashboard-title">Top Clients</h1>
                         <select class="select">
                             <option>Week</option>
@@ -61,6 +63,7 @@
                     </div>
                 </div> 
             </div>
-        </div>     
+        </div>
+        <script src="scripts/admin-frontend.js"></script>     
     </body>
 </html>
