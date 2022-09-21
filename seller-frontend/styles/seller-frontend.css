@@ -44,24 +44,32 @@
     align-items: center;
 }
 
+.end{
+    justify-content: flex-end;
+}
+
+.start{
+    align-content: start;
+}
+
 /************************************************************/
 /* main container */
 .main-container{
     height: 100vh;
-    /* width: 100%; */
+    width: 100%;
 }
 
 /************************************************************/
 /* left section */
 .left-section{
     background-color: #2565AE;
-    width: 25%;
+    width: 18%;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .seller-name{
-    margin-top: 140px;
+    margin-top: 100px;
     margin-left: 50px;
 }
 
@@ -72,6 +80,7 @@
 
 .div-logo {
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .logo{
@@ -83,11 +92,11 @@
 /************************************************************/
 /* right section */
 .right-section{
-    width: 75%;
+    width: 82%;
 }
 
 .right-div{
-    margin: 100px;
+    padding: 100px;
     width: 100%;
     height: 100%;
 }
@@ -95,6 +104,11 @@
 .outer-text{
     font-size: 24px;
     color: #2565AE;
+}
+
+.bar-div{
+    margin-top: 70px;
+    width: 100%;
 }
 
 .btn{
@@ -105,8 +119,42 @@
     width: 50px;
     height: 20px;
     font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-e{
+    margin: 0 10px;
 }
 
 .div-table{
+    margin-top: 10px;
     background-color: #d9d9d9;
+    height: 100%;
+    padding: 52px 35px;
+    overflow: auto;
+}
+
+.product-div{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.product-div > img{
+    width: 30px;
+    height: 30px;
+}
+
+.p-name{
+    width: 160px;
+    height: 40px;
+}
+
+.p-desc{
+    width: 347px;
+    height: 40px;
+}
+
+.p-price, .p-disc{
+    width: 80px;
+    height: 40px;
 }
