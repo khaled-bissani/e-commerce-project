@@ -86,7 +86,6 @@ body{
     text-align: center;
     padding: 1vh 0;
     margin: 5px 3vw;
-    display: none;
 }
 
 .frm{
@@ -140,7 +139,6 @@ body{
     text-align: center;
     padding: 1vh 0;
     margin: 5px 3vw;
-    /* display: none; */
 }
 
 /* footer */
