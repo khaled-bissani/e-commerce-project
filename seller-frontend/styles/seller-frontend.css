@@ -83,10 +83,13 @@
     cursor: pointer;
 }
 
-.logo{
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
+.div-logo > i{
+    font-size:20px;
+    color:white
+}
+
+.div-logo > p{
+    margin-left: 20px;
 }
 
 /************************************************************/
