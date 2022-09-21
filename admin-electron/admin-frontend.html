@@ -89,7 +89,7 @@
                     <div class="client-id">
                         <input type="text" class="input-id" placeholder="Seller ID">
                         <button class="button ban-button" id="open-add">Add</button>
-                        <button class="button add-button">Edit</button>
+                        <button class="button add-button" id="open-edit">Edit</button>
                         <button class="button delete-button">Delete</button>
                     </div>   
                     <div class="results-table">
@@ -100,13 +100,22 @@
                 </div>
             </div>        
         </div>  
-        <div class="addseller-form" id="add-seller">
+        <div class="seller-form" id="add-seller">
             <button class="close" id="close-add"><i class="fa-solid fa-xmark"></i></button>
             <div class="input-form">
                 <h1 class="title-form">Add Seller</h1>
                 <input type="text" placeholder="Seller Name" class="seller-input">
                 <input type="email" placeholder="Seller Email" class="seller-input">
-                <button class="addseller-button">Add Seller</button>
+                <button class="seller-button">Add Seller</button>
+            </div>    
+        </div>
+        <div class="seller-form edit" id="edit-seller">
+            <button class="close" id="close-edit"><i class="fa-solid fa-xmark"></i></button>
+            <div class="input-form">
+                <h1 class="title-form">Edit Seller</h1>
+                <input type="text" placeholder="Seller Name" class="seller-input">
+                <input type="email" placeholder="Seller Email" class="seller-input">
+                <button class="seller-button">Edit Seller</button>
             </div>    
         </div>  
         <script src="scripts/admin-frontend.js"></script>
