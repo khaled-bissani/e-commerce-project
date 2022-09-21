@@ -111,6 +111,11 @@ ul a:hover{
 .header-section > p{
     margin: 0 23px;
 }
+.fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 /* Item */
 .item-section{
     display: flex;
