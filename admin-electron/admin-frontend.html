@@ -8,96 +8,107 @@
         <title>Admin</title>
     </head>
     <body>
-        <div class="panel">
-            <div class="panel links">
-                <a id="to-dashboard">
-                    <i class="fa fa-dashboard"></i>
-                    <span class="links-name">Dashboard</span>
-                </a>
-                <a id="to-client">
-                    <i class="fa fa-user"></i>
-                    <span class="links-name">Clients</span>
-                </a>
-                <a id="to-seller">
-                    <i class="fa-sharp fa-solid fa-store"></i>
-                    <span class="links-name">Sellers</span>
-                </a>
-            </div>
-        </div>
-        <div class="admin-section dashboard" id="dashboard">
-            <div class="section-title">
-                <h1 class="title">Dashboard</h1>
-            </div>
-            <div class="section">
-                <div class="graph">
-                    <div class="graph-item" id="best-sellers">
-                        <h1 class="title dashboard-title">Best Sellers</h1>
-                        <select class="select">
-                            <option>Week</option>
-                            <option>Month</option>
-                            <option>Year</option>
-                        </select>
-                        <div class="seller-histogram" id="seller-histogram"></div>
-                    </div>
-                    <div class="graph-item" id="top-clients">
-                        <h1 class="title dashboard-title">Top Clients</h1>
-                        <select class="select">
-                            <option>Week</option>
-                            <option>Month</option>
-                            <option>Year</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="results">
-                    <div class="results-item">
-                        <h1 class="title result-title">Products</h1>
-                        <p class="input">200</p>
-                    </div>
-                    <div class="results-item">
-                        <h1 class="title result-title">Clients</h1>
-                        <p class="input">300</p>
-                    </div>
-                     <div class="results-item">
-                        <h1 class="title result-title">Sellers</h1>
-                        <p class="input">500</p>
-                    </div>
-                </div> 
-            </div>
-        </div>
-        <div class="admin-section clients" id="client-form">
-            <div class="section-title">
-                <h1 class="title">Clients</h1>
-            </div>
-            <div class="section">
-                <div class="client-id">
-                    <input type="text" class="input-id" placeholder="Client ID">
-                    <button class="button ban-button">Ban</button>
-                </div>   
-                <div class="results-table">
-                    <table class="table" id="table">
-                        <tr><th>Client Image</th><th>Client ID</th><th>Client Name</th><th>Client Email</th><th>Phone number</th></tr>
-                    </table>
+        <div class="main" id="main">
+            <div class="panel">
+                <div class="panel links">
+                    <a id="to-dashboard">
+                        <i class="fa fa-dashboard"></i>
+                        <span class="links-name">Dashboard</span>
+                    </a>
+                    <a id="to-client">
+                        <i class="fa fa-user"></i>
+                        <span class="links-name">Clients</span>
+                    </a>
+                    <a id="to-seller">
+                        <i class="fa-sharp fa-solid fa-store"></i>
+                        <span class="links-name">Sellers</span>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div class="admin-section sellers" id="seller-form">
-            <div class="section-title">
-                <h1 class="title">Sellers</h1>
-            </div>
-            <div class="section">
-                <div class="client-id">
-                    <input type="text" class="input-id" placeholder="Seller ID">
-                    <button class="button ban-button">Add</button>
-                    <button class="button add-button">Edit</button>
-                    <button class="button delete-button">Delete</button>
-                </div>   
-                <div class="results-table">
-                    <table class="table" id="table-seller">
-                        <tr><th>Seller Image</th><th>Seller ID</th><th>Seller Name</th><th>Seller Email</th><th>Phone number</th></tr>
-                    </table>
+            <div class="admin-section dashboard" id="dashboard">
+                <div class="section-title">
+                    <h1 class="title">Dashboard</h1>
+                </div>
+                <div class="section">
+                    <div class="graph">
+                        <div class="graph-item" id="best-sellers">
+                            <h1 class="title dashboard-title">Best Sellers</h1>
+                            <select class="select">
+                                <option>Week</option>
+                                <option>Month</option>
+                                <option>Year</option>
+                            </select>
+                            <div class="seller-histogram" id="seller-histogram"></div>
+                        </div>
+                        <div class="graph-item" id="top-clients">
+                            <h1 class="title dashboard-title">Top Clients</h1>
+                            <select class="select">
+                                <option>Week</option>
+                                <option>Month</option>
+                                <option>Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="results">
+                        <div class="results-item">
+                            <h1 class="title result-title">Products</h1>
+                            <p class="input">200</p>
+                        </div>
+                        <div class="results-item">
+                            <h1 class="title result-title">Clients</h1>
+                            <p class="input">300</p>
+                        </div>
+                        <div class="results-item">
+                            <h1 class="title result-title">Sellers</h1>
+                            <p class="input">500</p>
+                        </div>
+                    </div> 
                 </div>
             </div>
-        </div>    
+            <div class="admin-section clients" id="client-form">
+                <div class="section-title">
+                    <h1 class="title">Clients</h1>
+                </div>
+                <div class="section">
+                    <div class="client-id">
+                        <input type="text" class="input-id" placeholder="Client ID">
+                        <button class="button ban-button">Ban</button>
+                    </div>   
+                    <div class="results-table">
+                        <table class="table" id="table">
+                            <tr><th>Client Image</th><th>Client ID</th><th>Client Name</th><th>Client Email</th><th>Phone number</th></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="admin-section sellers" id="seller-form">
+                <div class="section-title">
+                    <h1 class="title">Sellers</h1>
+                </div>
+                <div class="section">
+                    <div class="client-id">
+                        <input type="text" class="input-id" placeholder="Seller ID">
+                        <button class="button ban-button" id="open-add">Add</button>
+                        <button class="button add-button">Edit</button>
+                        <button class="button delete-button">Delete</button>
+                    </div>   
+                    <div class="results-table">
+                        <table class="table" id="table-seller">
+                            <tr><th>Seller Image</th><th>Seller ID</th><th>Seller Name</th><th>Seller Email</th><th>Phone number</th></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>        
+        </div>  
+        <div class="addseller-form" id="add-seller">
+            <button class="close" id="close-add"><i class="fa-solid fa-xmark"></i></button>
+            <div class="input-form">
+                <h1 class="title-form">Add Seller</h1>
+                <input type="text" placeholder="Seller Name" class="seller-input">
+                <input type="email" placeholder="Seller Email" class="seller-input">
+                <button class="addseller-button">Add Seller</button>
+            </div>    
+        </div>  
         <script src="scripts/admin-frontend.js"></script>
         <script src="scripts/admin-clientform-frontend.js"></script>
         <script src="scripts/admin-sellerform-frontend.js"></script>
