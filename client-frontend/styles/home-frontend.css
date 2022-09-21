@@ -20,6 +20,8 @@ nav{
     background: #2565AE;
     height: 80px;
     width: 100%;
+    position: fixed;
+    top: 0;
 }
 .ecommerce-name{
     color: white;
@@ -100,8 +102,11 @@ ul a:hover{
     display: flex;
     justify-content: end;
     width: 100%;
-    margin-top: 20px;
+    height: 40px;
+    margin-top: 80px;
     margin-bottom: 70px;
+    padding-top: 10px;
+    background: rgba(179, 179, 179, 0.8);
 }
 .header-section > p{
     margin: 0 23px;
