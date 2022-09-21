@@ -1,4 +1,7 @@
 /* Css reset */
+:root{
+    --primary-color: #2565AE
+}
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +20,7 @@ img{
 }
 /* Nav bar */
 nav{
-    background: #2565AE;
+    background: var(--primary-color);
     height: 80px;
     width: 100%;
     position: fixed;
@@ -60,14 +63,14 @@ ul a:hover{
     border-radius: 50px;
     background-color: #fff;
     font-size: 20px;
-    color:#2565AE;
+    color:var(--primary-color);
     padding-left: 20px;
     margin-left: 50px;
     margin-right: 37px;
 }
 .search-button > i{
     font-size: 19px;
-    color: #2565AE;
+    color: var(--primary-color);
     padding-top: 9px;
     cursor: pointer;
 }
@@ -78,10 +81,10 @@ ul a:hover{
     padding-left: 10px;
     font-size: 16px;
     width: 90%;
-    color: #2565AE;
+    color: var(--primary-color);
 }
 .search-button > input::placeholder{
-    color: #2565AE;
+    color: var(--primary-color);
 }
 /* Hamburger menu */
 .checkbtn{
@@ -109,7 +112,8 @@ ul a:hover{
     background: rgba(179, 179, 179, 0.8);
 }
 .header-section > p{
-    margin: 0 23px;
+    margin-right: 20px;
+    margin-left: 5px;
 }
 .header-section i{
     cursor: pointer;
@@ -154,8 +158,13 @@ ul a:hover{
 }
 .item-option > i{
     font-size: 20px;
-    color: #2565AE;
+    color: var(--primary-color);
     cursor: pointer;
+}
+.item-information{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 /* Utilities */
 .container{
@@ -192,7 +201,7 @@ ul a:hover{
         position: fixed;
         width: 100%;
         height: 50vh;
-        background: #2565AE;
+        background: var(--primary-color);
         top: -80%;
         text-align: center;
         transition: all .5s;
@@ -215,6 +224,9 @@ ul a:hover{
     .search-button{
         margin-left: 330px;
     }
+    .item-section{
+        margin-left: 130px;
+    }
 }
 @media (max-width: 500px){
     .container{
@@ -235,5 +247,13 @@ ul a:hover{
     }
     nav ul {
         z-index: 0;
+    }
+    .item-section{
+        margin: 0;
+    }
+    .items{
+        width: 350px;
+        height: 350px;
+        margin-left: 55px;
     }
 }
