@@ -23,6 +23,14 @@ body{
     flex: 2;
     display: flex;
 }
+.logo-img-container{
+    border: solid;
+    width: 10%;
+}
+
+.logo-img-container img{
+    width: 100%;
+}
 
 .landing-btn-container{
     flex: 1;
