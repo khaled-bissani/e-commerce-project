@@ -54,6 +54,7 @@ body{
     border-style: none;
     border-radius: 10px;
     padding: 7px 10px;
+    transition-duration: 0.2s;
 }
 
 
@@ -85,7 +86,7 @@ body{
     text-align: center;
     padding: 1vh 0;
     margin: 5px 3vw;
-    /* display: none; */
+    display: none;
 }
 
 .frm{
@@ -110,6 +111,7 @@ body{
     margin: 3vh;
     padding: 1vh 3vh;
     border-radius: 5px;
+    transition-duration: 0.2s;
 }
 
 .ad-description{
@@ -138,7 +140,7 @@ body{
     text-align: center;
     padding: 1vh 0;
     margin: 5px 3vw;
-    display: none;
+    /* display: none; */
 }
 
 /* footer */
@@ -148,6 +150,26 @@ body{
     padding: 7vh 0 1vh 0;
 }
 
+/* hovering */
+
+.action-btn:hover{
+    cursor: pointer;
+    padding: 8px 11px;
+    transition-duration: 0.2s;
+}
+
+.create-btn:hover{
+    cursor: pointer;
+    color: white;
+    border-color: white;
+    background-color: rgba(5, 131, 210, 1);
+    transition-duration: 0.2s;
+}
+
+.login-span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
 /* responsiveness */
 
 @media screen and (max-width: 950px){
