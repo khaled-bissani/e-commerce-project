@@ -1,1 +1,49 @@
-/* Khaled Bissani */
+/* Css reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+}
+/* Nav bar */
+nav{
+    background: #2565AE;
+    height: 80px;
+    width: 100%;
+}
+.ecommerce-name{
+    color: white;
+    font-size: 25px;
+    line-height: 80px;
+    padding: 20px 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin-right: 80px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+ul a:hover{
+    color: rgb(45, 62, 80);
+    transition: .5s;
+}
