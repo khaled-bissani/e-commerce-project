@@ -55,11 +55,10 @@
     display: none;
 }
 
-
 .title{
     font-size: 40px;
     color: #2565AE;
-    padding: 20px;
+    padding: 20px 60px;
 }
 
 .section{
@@ -82,18 +81,25 @@
 
 .seller-histogram{
     width: 50%;
+    margin-left: 40px;
 }
 
 .dashboard-title{
     width: 100%;
     font-size: 28px;
-    padding: 10px 20px;
+    padding: 20px 60px;
+}
+
+.result-title{
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
 }
 
 .select{
     width: 35%;
     height: 35px;
-    margin-left: 22px;
+    margin-left: 60px;
     color: grey;
     font-size: 15px;
     outline: none;
@@ -102,26 +108,27 @@
 
 .results{
     display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+    justify-content: space-around;
+    margin: 50px 45px;
 }
 
 .results-item{
     width: 30%;
+    height: 160px;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 5px #888888;
 }
 
 .input{
-    margin: 10px 22px;
-    padding: 10px;
-    width: 50%;
+    text-align: center;
+    width: 40%;
     height: 50px;
-    border: 2px solid grey;
-    border-radius: 10px;
-    outline: none;
     color: grey;
-    font-size: 20px;
-    pointer-events: none;
-    user-select: none;
+    font-size: 50px;
 }
 
 .client-id{
@@ -131,7 +138,7 @@
 .input-id{
     width: 20%;
     height: 50px;
-    margin-left: 20px;
+    margin-left: 60px;
     font-size: 20px;
     text-align: center;
     user-select: none;
@@ -154,7 +161,7 @@
 }
 
 .table{
-    margin: 5px 0;
+    margin: 5px 40px;
     width: 100%;
     height: auto;
     text-align: center;
