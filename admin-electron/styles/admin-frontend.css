@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.side-bar{
+.panel{
     display: flex;
     flex-direction: column;
     width: 18%;
@@ -27,4 +27,77 @@
     font-size: 20px;
     font-weight: bold;
     padding: 15px 0;
+}
+
+/* admin pages */
+.admin-section{
+    width: 82%;
+    height: auto;
+    margin-left: 18%;
+    position: absolute;
+}
+
+/* dashboard page */
+.admin-dashboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 40px;
+    color: #2565AE;
+    padding: 20px;
+}
+
+.section-dashboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.graph{
+    display: flex;
+}
+
+.graph-item{
+    width: 50%;
+    margin-top: 30px;
+}
+
+.dashboard-title{
+    font-size: 28px;
+    padding: 10px 20px;
+}
+
+.select{
+    width: 20%;
+    height: 35px;
+    margin-left: 22px;
+    color: grey;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+.results{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.results-item{
+    width: 30%;
+}
+
+.input{
+    margin: 10px 22px;
+    padding: 10px;
+    width: 50%;
+    height: 50px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    outline: none;
+    color: grey;
+    font-size: 20px;
+    pointer-events: none;
+    user-select: none;
 }
