@@ -12,6 +12,9 @@ a{
     cursor: pointer;
     color: #000;
 }
+img{
+    height: 100%;
+}
 /* Nav bar */
 nav{
     background: #2565AE;
@@ -118,6 +121,27 @@ ul a:hover{
     border-radius: 10px;
     margin-right: 50px;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item-image{
+    width: 70%;
+    border-radius: 10px;
+}
+.item-image > img{
+    width: 100%;
+    border-radius: 10px;
+}
+.item-option{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.item-option > i{
+    font-size: 20px;
+    color: #2565AE;
 }
 /* Utilities */
 .container{
