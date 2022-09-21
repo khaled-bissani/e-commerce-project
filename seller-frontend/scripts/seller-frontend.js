@@ -1,3 +1,4 @@
+// toggle through pages
 const sec_home = document.getElementById("home-section");
 const sec_category = document.getElementById("category-section");
 const sec_revenue = document.getElementById("revenue-section");
@@ -26,3 +27,15 @@ btn_revenue.addEventListener('click',()=>{
     sec_category.style.display='none';
     sec_revenue.style.display='block';    
 })
+
+////////////////////////////////////////////////////
+// pop up
+const btn_add = document.getElementById("btn-add");
+btn_add.addEventListener('click',()=>{
+    document.getElementById("myForm").style.display = "block";
+});
+
+const btn_close = document.getElementById("btn-close");
+btn_close.addEventListener('click',()=>{
+    document.getElementById("myForm").style.display = "none";
+});

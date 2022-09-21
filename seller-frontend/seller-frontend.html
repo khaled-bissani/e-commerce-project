@@ -36,7 +36,7 @@
             <div class="bar-div flex center-y space-around">
                 <p>My products</p>
                 <div class="btn-div">
-                    <button class="btn">Add</button>
+                    <button class="btn" id="btn-add">Add</button>
                     <button class="btn btn-e">Edit</button>
                     <button class="btn">Delete</button>
                 </div>
@@ -46,9 +46,7 @@
                     <img src="assets/charbel.png" alt="">
                     <p class="p-name">product name</p>
                     <p class="p-cat">category</p>
-                    <p class="p-desc">description</p>
                     <p class="p-price">$1000</p>
-                    <p class="p-disc">10%</p>
                     <div class="flex column start" >
                         <input type="checkbox">
                     </div>
@@ -57,14 +55,34 @@
                     <img src="assets/charbel.png" alt="">
                     <p class="p-name">product name</p>
                     <p class="p-cat">category</p>
-                    <p class="p-desc">description</p>
                     <p class="p-price">$1000</p>
-                    <p class="p-disc">10%</p>
                     <div class="flex column start" >
                         <input type="checkbox">
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Add product</h1>
+
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter name" name="name" required>
+
+                <label for="price"><b>Price</b></label>
+                <input type="number" placeholder="Price" name="price" required>
+
+                <select name="Category" id="category" required>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" id="btn-close" onclick="closeForm()">Close</button>
+            </form>
         </div>
         <!-- end home section -->
         <!-- start category section -->
