@@ -23,12 +23,18 @@ body{
 .align-items-center {
   align-items: center;
 }
+.dir-column {
+  flex-direction: column;
+}
+
 /* navbar styles*/
 .navbar {
-  background-color: 2565AE;
+ 
   font-size: 25px;
   position: fixed;
+  top: 0;
   width: 100% ;
+  background-color: 2565AE;
 }
 .nav-cst img {
   width: 75px;
@@ -83,4 +89,46 @@ body{
   padding-left: 1px;
   
 
+}
+/* info styles*/
+.info{
+ margin-top: 15.5vh;
+ align-items: center;
+
+}
+.profile-pic{
+  width: 400px;
+   height: 260px; 
+   align-items: center;
+  
+  
+}
+.profile-pic img{
+  border-radius: 100%;
+}
+.info-tab {
+  width: 1000px;
+  height: 260px;
+  align-items: center;
+  background-color: orange;
+}
+.info-item1 {
+  width:250px;
+  height:50px;
+  margin:5px;
+  background:white;
+  
+ align-items: center;
+  justify-content: center;
+  
+}
+.info-item2 {
+  width:250px;
+  height:50px;
+  margin:5px;
+  background:white;
+  border-radius: 30px;
+
+  align-items: center;
+  justify-content: center;
 }
