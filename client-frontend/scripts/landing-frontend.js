@@ -7,6 +7,15 @@ const signup_nav = document.getElementById("signup-btn");
 const signup_span = document.getElementById("signup-span");
 
 
+const name = document.getElementById("name");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const confirmpassword = document.getElementById("confirmpassword");
+console.log(name);
+
+
+
 // fct to make the login div appear the signup div disappear
 function showLogin(){
     const signin_div = document.getElementsByClassName("signin-div");
