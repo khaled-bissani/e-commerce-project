@@ -1,10 +1,11 @@
+//getting the login clickable parts
 const login_nav = document.getElementById("login-btn");
-const signup_nav = document.getElementById("signup-btn");
-
 const login_span = document.getElementById("login-span");
+
+//getting signup clickable parts
+const signup_nav = document.getElementById("signup-btn");
 const signup_span = document.getElementById("signup-span");
 
-// login_nav.addEventListener("click", showLogin);
 
 // fct to make the login div appear the signup div disappear
 function showLogin(){
@@ -24,9 +25,12 @@ function showSignup(){
 
 }
 
-//
+//calling the fct showLogin() every time a login button is clicked
 login_nav.addEventListener("click", showLogin);
 login_span.addEventListener("click", showLogin);
 
+//calling the fct showSignup() everytime the sign up button is clicked
 signup_nav.addEventListener("click", showSignup);
 signup_span.addEventListener("click", showSignup);
+
+
