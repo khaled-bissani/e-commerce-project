@@ -6,7 +6,7 @@ const login_span = document.getElementById("login-span");
 const signup_nav = document.getElementById("signup-btn");
 const signup_span = document.getElementById("signup-span");
 
-
+//getting elements from the sign in form
 const fname = document.getElementById("fname");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
@@ -14,6 +14,11 @@ const password = document.getElementById("password");
 const confirmpassword = document.getElementById("confirmpassword");
 const signup_btn = document.getElementById("signup-form-btn");
 
+//getting elements from the login form
+const login_username = document.getElementById("username-signin");
+const login_password = document.getElementById("password-signin");
+//getting the login button in the login form
+const login_btn = document.getElementById("login-form-btn");
 
 // regex to check email format
 let emailFormat=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -94,7 +99,10 @@ function checkSignup(){
     }
 }
 
+//fct 
+function checkLogin(){
 
+}
 
 //calling the fct showLogin() every time a login button is clicked
 login_nav.addEventListener("click", showLogin);
