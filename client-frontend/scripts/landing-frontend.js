@@ -38,47 +38,63 @@ function showSignup(){
 
 //fct to check signup and make sure all the input values are valid
 function checkSignup(){
-    if ((fname.value != '') && (email.value != '' && emailFormat.test(email.value)) && (username.value != '')  && (password.value != '') && (confirmpassword.value != '' && confirmpassword.value == password.value)){
+    if (fname.value == '') {
+        fname.style.borderColor = "red"; 
+        fname.style.borderWidth = "3px";
+        fname.placeholder = "please enter a name!!";
+    }
+    if (username.value == '') {
+        username.style.borderColor = "red"; 
+        username.style.borderWidth = "3px";
+        username.placeholder = "please enter a username!!";
+    }
+    if (password.value == '') {
+        password.style.borderColor = "red"; 
+        password.style.borderWidth = "3px";
+        password.placeholder = "please enter a password!!";
+    }
+    if (confirmpassword.value == ''){
+        confirmpassword.style.borderColor = "red"; 
+        confirmpassword.style.borderWidth = "3px";
+        confirmpassword.placeholder = "please confirm your password!!";
+    }
+    if (email.value == '') {
+        email.style.borderColor = "red"; 
+        email.style.borderWidth = "3px";
+        email.placeholder = "please enter an email!!";
+    }
+    else if(!emailFormat.test(email.value)){
+        email.style.borderColor = "red"; 
+        email.style.borderWidth = "3px";
+        email.value = '';
+        email.placeholder = "please enter a valid email!!";
+    }
+    else if(password.value != confirmpassword.value){
+        confirmpassword.style.borderColor = "red"; 
+        confirmpassword.style.borderWidth = "3px";
+        confirmpassword.value = '';
+        password.value = '';
+        password.placeholder = "try again!";
+        confirmpassword.placeholder = "your password entries do not match!";
+    }
+
+    else{
         localStorage.setItem("fullname",fname.value);
         localStorage.setItem("email",email.value);
         localStorage.setItem("username",username.value);
         localStorage.setItem("password",password.value);
         
+        fname.value = '';
+        username.value = '';
+        password.value = '';
+        confirmpassword.value = ''
+        email.value = '';
         console.log('success');
         // console.log(localStorage.getItem('fullname'));
     }
-    else {
-        if (fname.value == '') {
-            fname.style.borderColor = "red"; 
-            fname.style.borderWidth = "3px";
-            fname.placeholder = "please enter a name!!";
-        }
-        if (username.value == '') {
-            username.style.borderColor = "red"; 
-            username.style.borderWidth = "3px";
-            username.placeholder = "please enter a username!!";
-        }
-        if (password.value == '') {
-            password.style.borderColor = "red"; 
-            password.style.borderWidth = "3px";
-            password.placeholder = "please enter a password!!";
-        }
-        if (confirmpassword.value == ''){
-            confirmpassword.style.borderColor = "red"; 
-            confirmpassword.style.borderWidth = "3px";
-            confirmpassword.placeholder = "please confirm your password!!";
-        }
-        if (email.value == '') {
-            email.style.borderColor = "red"; 
-            email.style.borderWidth = "3px";
-            email.placeholder = "please enter an email!!";
-        }
-    }
-       
-
-    
-
 }
+
+
 
 //calling the fct showLogin() every time a login button is clicked
 login_nav.addEventListener("click", showLogin);
