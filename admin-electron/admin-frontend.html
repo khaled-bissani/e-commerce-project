@@ -93,10 +93,10 @@
                 </div>
                 <div class="section">
                     <div class="client-id">
-                        <input type="text" class="input-id" placeholder="Seller ID">
+                        <input type="text" class="input-id" placeholder="Seller ID" id="seller-id">
                         <button class="button ban-button" id="open-add">Add</button>
                         <button class="button add-button" id="open-edit">Edit</button>
-                        <button class="button delete-button">Delete</button>
+                        <button class="button delete-button" id="delete" disabled>Delete</button>
                     </div>   
                     <div class="results-table">
                         <table class="table" id="table-seller">
@@ -110,19 +110,19 @@
             <button class="close" id="close-add"><i class="fa-solid fa-xmark"></i></button>
             <div class="input-form">
                 <h1 class="title-form">Add Seller</h1>
-                <input type="text" placeholder="Seller Name" class="seller-input">
-                <input type="text" placeholder="Seller Username" class="seller-input">
-                <input type="email" placeholder="Seller Email" class="seller-input">
-                <button class="seller-button">Add Seller</button>
+                <input type="text" placeholder="Seller Name" class="seller-input" id="sellername">
+                <input type="text" placeholder="Seller Username" class="seller-input" id="sellerusername">
+                <input type="email" placeholder="Seller Email" class="seller-input" id="selleremail">
+                <button class="seller-button" id="add">Add Seller</button>
             </div>    
         </div>
         <div class="seller-form edit" id="edit-seller">
             <button class="close" id="close-edit"><i class="fa-solid fa-xmark"></i></button>
             <div class="input-form">
                 <h1 class="title-form">Edit Seller</h1>
-                <input type="text" placeholder="Seller Name" class="seller-input">
-                <input type="email" placeholder="Seller Email" class="seller-input">
-                <button class="seller-button">Edit Seller</button>
+                <input type="text" placeholder="Seller Name" class="seller-input" id="editname">
+                <input type="email" placeholder="Seller Email" class="seller-input" id="editemail">
+                <button class="seller-button" id="edit">Edit Seller</button>
             </div>    
         </div>  
         <script src="scripts/admin-frontend.js"></script>
