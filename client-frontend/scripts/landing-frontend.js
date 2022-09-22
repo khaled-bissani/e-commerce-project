@@ -55,11 +55,15 @@ function checkSignup(){
         username.style.borderColor = "red"; 
         username.placeholder = "please enter a username!!";
     }
-    // else if (password.value == '') {
-    //     password.style.borderColor = "red"; 
-    //     password.placeholder = "please enter a password!!";
-        
-    // }
+    else if (password.value == '') {
+        password.style.borderColor = "red"; 
+        password.placeholder = "please enter a password!!";
+    }
+    else if (confirmpassword.value == ''){
+        confirmpassword.style.borderColor = "red"; 
+        confirmpassword.placeholder = "please confirm your password!!";
+    }
+       
 
     // else if (email.value == '') {
     //     email.style.borderColor = "red"; 
