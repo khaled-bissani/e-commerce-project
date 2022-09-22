@@ -4,6 +4,19 @@ const go_seller=document.querySelector('#to-seller');
 const dashboard=document.querySelector('#dashboard');
 const client_form=document.querySelector('#client-form');
 const seller_form=document.querySelector('#seller-form');
+const time_seller=document.querySelector('#time-seller');
+const time_client=document.querySelector('#time-client');
+const number_product=document.querySelector('#numberproduct');
+const number_client=document.querySelector('#numberclient');
+const number_seller=document.querySelector('#numberseller');
+
+time_seller.addEventListener('change',()=>{
+  console.log(time_seller.value);
+})
+
+time_client.addEventListener('change',()=>{
+  console.log(time_client.value);
+})
 
 //open dashboard-from
 go_dashboard.addEventListener('click',()=>{

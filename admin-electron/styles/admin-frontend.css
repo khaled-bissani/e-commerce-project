@@ -110,6 +110,7 @@
     width: 100%;
     font-size: 35px;
     text-align: center;
+    color: white;
 }
 
 .select{
@@ -132,19 +133,25 @@
     width: 30%;
     height: 150px;
     background-color: #d9d9d9;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 3px 5px #888888;
+}
+
+.results-item:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .input{
     text-align: center;
     width: 40%;
     height: 50px;
-    color: grey;
+    color: white;
     font-size: 50px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* client form*/
@@ -224,6 +231,12 @@ tr{
     z-index: 9;
 }
 
+.add{
+    width: 60%;
+    height: 60%;
+    bottom: 30%;
+}
+
 .close{
     width: 5%;
     height: 10%;
@@ -278,5 +291,17 @@ tr{
     transition: all 0.5s ease-in-out;
     background-color: #888888;
     color: white;
+}
+
+.blue{
+    background-color: #2565AE;
+}
+
+.dodgerblue{
+    background-color: dodgerblue;
+}
+
+.orange{
+    background-color: darkorange;
 }
 

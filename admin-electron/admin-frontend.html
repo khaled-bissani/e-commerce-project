@@ -34,35 +34,37 @@
                     <div class="graph">
                         <div class="graph-item" id="best-sellers">
                             <h1 class="title dashboard-title">Best Sellers</h1>
-                            <select class="select">
-                                <option>Week</option>
-                                <option>Month</option>
-                                <option>Year</option>
+                            <select class="select" id="time-seller">
+                                <option value="-">-</option>
+                                <option value="week">Week</option>
+                                <option value="month">Month</option>
+                                <option value="year">Year</option>
                             </select>
                             <div class="seller-histogram" id="seller-histogram"></div>
                         </div>
                         <div class="graph-item client-item" id="top-clients">
                             <h1 class="title dashboard-title">Top Clients</h1>
-                            <select class="select">
-                                <option>Week</option>
-                                <option>Month</option>
-                                <option>Year</option>
+                            <select class="select" id="time-client">
+                                <option value="-">-</option>
+                                <option value="week">Week</option>
+                                <option value="month">Month</option>
+                                <option value="year">Year</option>
                             </select>
                             <div class="client-histogram" id="client-histogram"></div>
                         </div>
                     </div>
                     <div class="results">
-                        <div class="results-item">
+                        <div class="results-item blue">
                             <h1 class="title result-title">Products</h1>
-                            <p class="input">200</p>
+                            <p class="input" id="numberproduct">200</p>
                         </div>
-                        <div class="results-item">
+                        <div class="results-item dodgerblue">
                             <h1 class="title result-title">Clients</h1>
-                            <p class="input">300</p>
+                            <p class="input" id="numberclient">300</p>
                         </div>
-                        <div class="results-item">
+                        <div class="results-item orange">
                             <h1 class="title result-title">Sellers</h1>
-                            <p class="input">500</p>
+                            <p class="input" id="numberseller">500</p>
                         </div>
                     </div> 
                 </div>
@@ -104,11 +106,12 @@
                 </div>
             </div>        
         </div>  
-        <div class="seller-form" id="add-seller">
+        <div class="seller-form add" id="add-seller">
             <button class="close" id="close-add"><i class="fa-solid fa-xmark"></i></button>
             <div class="input-form">
                 <h1 class="title-form">Add Seller</h1>
                 <input type="text" placeholder="Seller Name" class="seller-input">
+                <input type="text" placeholder="Seller Username" class="seller-input">
                 <input type="email" placeholder="Seller Email" class="seller-input">
                 <button class="seller-button">Add Seller</button>
             </div>    
