@@ -34,20 +34,20 @@ const margin = { top: 30, bottom: 30, left: 65, right: 30 };
 
 
 //create d3 element - histogram sellers
-/*const svg = d3.select('#seller-histogram')
+/*var svg = d3.select('#seller-histogram')
   .append('svg')
   .attr('width', width)
   .attr('height', height)
   .attr("viewBox", [0, 0, width, height]);*/
 
 //range x-axis  
-const x = d3.scaleBand()
+var x = d3.scaleBand()
   .domain(d3.range(data.length))
   .range([margin.left, width])
   .padding(0.1)
   
 //range y-axis  
-const y = d3.scaleLinear()
+var y = d3.scaleLinear()
   //.domain([0, 100])
   .range([height - margin.bottom, margin.top])
 
@@ -82,6 +82,56 @@ const xAxis=(g) =>{
 
 svg.append("g").call(xAxis);
 svg.append("g").call(yAxis);
+svg.node();
+
+
+
+/* client histogram*/
+/*var svg = d3.select('#client-histogram')
+  .append('svg')
+  .attr('width', width)
+  .attr('height', height)
+  .attr("viewBox", [0, 0, width, height]);
+*/
+//range x-axis  
+var x = d3.scaleBand()
+  .domain(d3.range(data.length))
+  .range([margin.left, width])
+  .padding(0.1)
+
+//range y-axis  
+var y = d3.scaleLinear()
+  .domain([0, 100])
+  .range([height - margin.bottom, margin.top])
+
+//group svg element  
+svg
+  .append("g")
+  .attr("fill", 'orange')
+  .selectAll("rect")
+  //.data(data.sort((a, b) => d3.descending(a.score, b.score)))
+  .join("rect")
+    //.attr("x", (d, i) => x(i))
+    //.attr("y", d => y())
+    //.attr('title', (d) => )
+    .attr("class", "rect")
+    //.attr("height", d => y(0) - y())
+    .attr("width", x.bandwidth());
+
+const yAxisc=(g)=> {
+  g.attr("transform", `translate(${margin.left}, 0)`)
+    //.call(d3.axisLeft(y).ticks(null, data.))
+    .attr("font-size", '20px')
+}
+
+const xAxisc=(g)=> {
+  g.attr("transform", `translate(0,${height - margin.bottom})`)
+    //.call(d3.axisBottom(x).tickFormat(i => data[i].))
+    .attr("font-size", '20px')
+}
+
+svg.append("g").call(xAxisc);
+svg.append("g").call(yAxisc);
 svg.node();
 
 
