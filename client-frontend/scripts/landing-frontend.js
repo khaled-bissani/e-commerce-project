@@ -40,11 +40,16 @@ function showSignup(){
 function checkSignup(){
     if ((fname.value != '') && (email.value != '' && emailFormat.test(email.value)) && (username.value != '')  && (password.value != '') && (confirmpassword.value != '' && confirmpassword.value == password.value)){
         localStorage.setItem("fullname",fname.value);
-        console.log(localStorage.getItem('fullname'));
+        localStorage.setItem("email",email.value);
+        localStorage.setItem("username",username.value);
+        localStorage.setItem("password",password.value);
+        
+        console.log('success');
+        // console.log(localStorage.getItem('fullname'));
     }
-    else{
-        console.log("fail");
-    }
+    else if (fname.value == '') {
+        fname.style.borderColor = "red"; 
+        fname.placeholder = "please enter a name!!";}
 
 }
 
