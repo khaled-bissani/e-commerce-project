@@ -47,28 +47,36 @@ function checkSignup(){
         console.log('success');
         // console.log(localStorage.getItem('fullname'));
     }
-    else if (fname.value == '') {
-        fname.style.borderColor = "red"; 
-        fname.placeholder = "please enter a name!!";
-    }
-    else if (username.value == '') {
-        username.style.borderColor = "red"; 
-        username.placeholder = "please enter a username!!";
-    }
-    else if (password.value == '') {
-        password.style.borderColor = "red"; 
-        password.placeholder = "please enter a password!!";
-    }
-    else if (confirmpassword.value == ''){
-        confirmpassword.style.borderColor = "red"; 
-        confirmpassword.placeholder = "please confirm your password!!";
+    else {
+        if (fname.value == '') {
+            fname.style.borderColor = "red"; 
+            fname.style.borderWidth = "3px";
+            fname.placeholder = "please enter a name!!";
+        }
+        if (username.value == '') {
+            username.style.borderColor = "red"; 
+            username.style.borderWidth = "3px";
+            username.placeholder = "please enter a username!!";
+        }
+        if (password.value == '') {
+            password.style.borderColor = "red"; 
+            password.style.borderWidth = "3px";
+            password.placeholder = "please enter a password!!";
+        }
+        if (confirmpassword.value == ''){
+            confirmpassword.style.borderColor = "red"; 
+            confirmpassword.style.borderWidth = "3px";
+            confirmpassword.placeholder = "please confirm your password!!";
+        }
+        if (email.value == '') {
+            email.style.borderColor = "red"; 
+            email.style.borderWidth = "3px";
+            email.placeholder = "please enter an email!!";
+        }
     }
        
 
-    // else if (email.value == '') {
-    //     email.style.borderColor = "red"; 
-    //     email.placeholder = "please enter an email!!";
-    // }
+    
 
 }
 
