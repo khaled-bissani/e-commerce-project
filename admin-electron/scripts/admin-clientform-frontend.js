@@ -22,6 +22,7 @@ for(var i=1; i < table.rows.length; i++){
         table.rows[i].onclick = function(){
         client_id.value=this.cells[1].innerHTML;
         ban.disabled=false;
+        ban.classList.remove('blur');
     }
 }
 
