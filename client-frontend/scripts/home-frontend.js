@@ -18,6 +18,7 @@ const closeVoucher = document.getElementById('close-voucher');
 
 voucherBtn.onclick = function() {
     voucherPopup.style.display = "block";
+    cartPopup.style.display = "none";
 }
 closeVoucher.onclick = function() {
     voucherPopup.style.display = "none";
@@ -29,6 +30,7 @@ const closeCart = document.getElementById('close-cart');
 
 cartBtn.onclick = function() {
     cartPopup.style.display = "block";
+    voucherPopup.style.display = "none";
 }
 closeCart.onclick = function() {
     cartPopup.style.display = "none";

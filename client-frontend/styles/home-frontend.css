@@ -238,11 +238,41 @@ ul a:hover{
 }
 .cart-details{
     width:60%;
-    border:1px solid #000;
+    border:1px solid #E5E5E5;
+}
+.item-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.item-header > h2{
+    font-size: 16px;
+    color: #9DA7B3;
+}
+.item-shop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-shop-image{
+    width: 25%;
+}
+.item-shop-image > img{
+    width: 100%;
+}
+.item-name > p{
+    font-size: 12px;
+}
+.item-quantity{
+   width: 10%;
+}
+.item-quantity > input{
+    text-align: center;
+    width: 100%;
 }
 .cart-checkout{
     width: 35%;
-    border:1px solid #000;
+    border:1px solid #E5E5E5;
 }
 /* Utilities */
 .container{
