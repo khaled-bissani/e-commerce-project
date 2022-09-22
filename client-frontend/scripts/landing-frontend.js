@@ -49,7 +49,22 @@ function checkSignup(){
     }
     else if (fname.value == '') {
         fname.style.borderColor = "red"; 
-        fname.placeholder = "please enter a name!!";}
+        fname.placeholder = "please enter a name!!";
+    }
+    else if (username.value == '') {
+        username.style.borderColor = "red"; 
+        username.placeholder = "please enter a username!!";
+    }
+    // else if (password.value == '') {
+    //     password.style.borderColor = "red"; 
+    //     password.placeholder = "please enter a password!!";
+        
+    // }
+
+    // else if (email.value == '') {
+    //     email.style.borderColor = "red"; 
+    //     email.placeholder = "please enter an email!!";
+    // }
 
 }
 
