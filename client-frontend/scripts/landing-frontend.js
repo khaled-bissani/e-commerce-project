@@ -24,6 +24,9 @@ function showSignup(){
 
 }
 
+//
 login_nav.addEventListener("click", showLogin);
-signup_nav.addEventListener("click", showSignup);
+login_span.addEventListener("click", showLogin);
 
+signup_nav.addEventListener("click", showSignup);
+signup_span.addEventListener("click", showSignup);
