@@ -11,3 +11,15 @@ function onScroll() {
     subNavbar.classList.remove("fixed");
   }
 }
+
+// Display the voucher popup on click
+const voucherPopup = document.getElementById('voucher-popup');
+const voucherBtn = document.getElementById('voucher-btn');
+const closeVoucher = document.getElementById('close');
+
+voucherBtn.onclick = function() {
+    voucherPopup.style.display = "block";
+}
+closeVoucher.onclick = function() {
+    voucherPopup.style.display = "none";
+}

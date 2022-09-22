@@ -13,16 +13,27 @@
     </head>
     <body>
         <!-- Start popup section -->
-        <div class="popup">
+        <div id="voucher-popup" class="popup">
             <button id="close">&times;</button>
             <h1>Voucher</h1>
             <div class="voucher-card">
-                <div class="voucher-information">
-                    <input type="text" />
-                    <input type="text" />
-                    <input type="text" />
+                <div class="voucher-details">
+                    <div>
+                        <label for="to-friend">To:</label>
+                        <input id="to-friend" type="text" placeholder="Friend email"/>
+                    </div>
+                    <div>
+                        <label for="from-client">From:</label>
+                        <input id="from-client" type="text" placeholder="Client email"/>
+                    </div>
+                    <div>
+                        <label for="amount">Amount:</label>
+                        <input id="amount" type="text" placeholder="$$$"/>
+                    </div>
                 </div>
-                <div></div>
+                <div class="voucher-information">
+                    <p>10$</p>
+                </div>
             </div>
         </div>
         <!-- End popup section -->
@@ -45,7 +56,7 @@
         <!-- End Nav bar section -->
         <!-- Start header section -->
         <div id="sub-nav" class="header-section container">
-            <i class="fa fa-credit-card"></i>
+            <i id="voucher-btn" class="fa fa-credit-card"></i>
             <p>Voucher</p>
             <i class="fa fa-shopping-cart"></i>
             <p>Cart</p>

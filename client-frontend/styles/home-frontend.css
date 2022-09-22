@@ -172,17 +172,21 @@ ul a:hover{
 /* Popup */
 .popup{
     background-color: #ffffff;
-    width: 420px;
+    width: 700px;
     padding: 30px 40px;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
     border-radius: 8px;
-    /* display: none; */
+    display: none;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin-top: 200px;
+}
+.popup:target {
+    visibility: visible;
+    opacity: 1;
 }
 .popup button{
     display: block;
@@ -204,10 +208,20 @@ ul a:hover{
     display: flex;
     justify-content: space-between;
 }
-.voucher-information{
+.voucher-details{
     display: flex;
     flex-direction: column;
     align-content: space-around;
+}
+.voucher-details > div {
+    display: flex;
+    justify-content: space-between;
+}
+#to-friend, #from-client, #amount{
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+    margin-left: 10px;
 }
 /* Utilities */
 .container{
