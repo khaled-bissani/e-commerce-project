@@ -97,8 +97,9 @@ body {
 }
 .profile-pic img {
   border-radius: 100%;
-  width: 85%;
-  height: 95%;
+  margin: 15px;
+  width: 75%;
+  height: 85%;
 }
 .info-tab {
   margin-left: 20px;
@@ -106,12 +107,14 @@ body {
   height:40vh;
   align-items: center;
   background-color: orange;
+  border-radius: 10px;
 }
 .info-item1 {
   width: 90%;
   height: 25%;
-  margin: 10px;
+  margin: 15px;
   background: white;
+  border-radius: 10px;
 
   align-items: center;
   justify-content: center;
@@ -120,16 +123,7 @@ body {
   width: 30% ;
   height: 100%;
 }
-.info-item2 {
-  width: 90%;
-  height: 25%;
-  margin: 10px;
-  background: white;
-  border-radius: 30px;
 
-  align-items: center;
-  justify-content: center;
-}
 /*features styles*/
 .features {
   margin-top: 20px;
@@ -141,12 +135,16 @@ body {
   background-color: orange;
   width: 30.5%;
   height: 40vh;
+  border-radius: 10px;
+
 }
 .left-sctn .box1 {
   width: 90%;
   height: 18%;
   background-color: white;
-  margin: 10px;
+  margin: 15px;
+  border-radius: 10px;
+
  
 
   align-items: center;
@@ -160,6 +158,8 @@ body {
   align-items: center;
   justify-content: center;
   overflow: auto;
+  border-radius: 10px;
+
 }
 
 ul {
@@ -175,14 +175,18 @@ ul {
   height: 40vh;
   margin-left: 20px;
   align-items: center;
+  border-radius: 10px;
+
 }
 .right-sctn .box1 {
   width:90%;
   height: 18%;
   background-color: white;
-  margin: 10px;
+  margin: 15px;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
+
 }
 .right-sctn .disc-table {
   width: 90%;
@@ -192,8 +196,74 @@ ul {
   align-items: center;
   justify-content: center;
   overflow: auto;
+  border-radius: 10px;
+
 }
 
-ul {
-  height: 100%;
+@media screen and (max-width: 500px) {
+  .info{
+    flex-direction: column;
+    
+  }
+  
+  .info-tab{
+    width: 95%;
+    margin: 10px;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .fir-clm-info{
+    width: 95%;
+    margin-right: 30px;
+  }
+  .info-item1{
+    width: 100%;
+    height: 40px;
+  }
+ 
+  .profile-pic{
+    width: 90%;
+  }
+   .features{
+    flex-direction: column  ;
+  }
+  .left-sctn{
+    width: 95%;
+    margin: 10px;
+    height: fit-content;
+  }
+  .right-sctn{
+    flex-direction: column;
+    margin: 10px;
+    width: 95%;
+    height: fit-content;
+    
+  }
+  .left-sctn .box1 {
+    width: 90%;
+    height: 40px;
+    
+   
+  }
+  .left-sctn .disc-table {
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+    margin-bottom: 20px;
+   
+  
+  }
+  .right-sctn .disc-table {
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+    margin-bottom: 20px;
+  
+  }
+  .right-sctn .box1 {
+    width: 90%;
+    height: 40px;
+  }
+
+
 }
