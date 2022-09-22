@@ -20,8 +20,7 @@ const login_password = document.getElementById("password-signin");
 //getting the login button in the login form
 const login_btn = document.getElementById("login-form-btn");
 
-// regex to check email format
-let emailFormat=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 
 // fct to make the login div appear the signup div disappear
 function showLogin(){
@@ -43,6 +42,10 @@ function showSignup(){
 
 //fct to check signup and make sure all the input values are valid
 function checkSignup(){
+
+    // regex to check email format
+    let emailFormat=/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     if (fname.value == '') {
         fname.style.borderColor = "red"; 
         fname.style.borderWidth = "3px";
@@ -99,9 +102,27 @@ function checkSignup(){
     }
 }
 
-//fct 
+//fct to check if the input fields are correct in the login form
 function checkLogin(){
+    if (login_username.value == ''){
+        login_username.style.borderColor = "red";
+        login_username.style.borderWidth = "3px";
+        login_username.placeholder = "Please enter your username!";
+    }
+    if (login_password.value == ''){
+        login_password.style.borderColor = "red";
+        login_password.style.borderWidth = "3px";
+        login_password.placeholder = "enter your password";
+    }
+    else if (login_username.value != '' && login_password.value != ''){
+        localStorage.setItem("login-username",login_username.value);
+        localStorage.setItem("login-password",login_password.value);
 
+        login_username.value = '';
+        login_password.value = '';
+        console.log("success login");
+    }
+    
 }
 
 //calling the fct showLogin() every time a login button is clicked
@@ -112,6 +133,9 @@ login_span.addEventListener("click", showLogin);
 signup_nav.addEventListener("click", showSignup);
 signup_span.addEventListener("click", showSignup);
 
+//calling the checkSignup fct to check the user input in the sign up form
 signup_btn.addEventListener("click", checkSignup);
 
+//calling the fct to check user input in login form
+login_btn.addEventListener("click", checkLogin);
 
