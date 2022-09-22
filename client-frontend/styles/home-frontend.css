@@ -232,6 +232,18 @@ ul a:hover{
 .share-voucher > i{
     cursor: pointer;
 }
+.cart-item{
+    display: flex;
+    justify-content: space-between;
+}
+.cart-details{
+    width:60%;
+    border:1px solid #000;
+}
+.cart-checkout{
+    width: 35%;
+    border:1px solid #000;
+}
 /* Utilities */
 .container{
     padding-left: 45px;

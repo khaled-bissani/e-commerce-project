@@ -13,8 +13,9 @@
     </head>
     <body>
         <!-- Start popup section -->
+        <!-- Voucher popup -->
         <div id="voucher-popup" class="popup">
-            <button id="close">&times;</button>
+            <button id="close-voucher">&times;</button>
             <h1>Voucher</h1>
             <div class="voucher-card">
                 <div class="voucher-details">
@@ -40,6 +41,15 @@
                 </div>
             </div>
         </div>
+        <!-- Cart popup -->
+        <div id="cart-popup" class="popup">
+            <button id="close-cart">&times;</button>
+            <h1>Cart</h1>
+            <div class="cart-item">
+                <div class="cart-details"></div>
+                <div class="cart-checkout"></div>
+            </div>
+        </div>
         <!-- End popup section -->
         <!-- Start Nav bar section -->
         <nav>
@@ -62,7 +72,7 @@
         <div id="sub-nav" class="header-section container">
             <i id="voucher-btn" class="fa fa-credit-card"></i>
             <p>Voucher</p>
-            <i class="fa fa-shopping-cart"></i>
+            <i id="cart-btn" class="fa fa-shopping-cart"></i>
             <p>Cart</p>
             <i class="fa fa-list-alt"></i>
             <p>Wishlist</p>
