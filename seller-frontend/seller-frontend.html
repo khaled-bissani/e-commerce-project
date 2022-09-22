@@ -52,7 +52,7 @@
                     <p class="p-cat">category</p>
                     <p class="p-price">$1000</p>
                     <div class="flex column start" >
-                        <input type="checkbox">
+                        <input type="radio" id="" name="product">
                     </div>
                 </div>
                 <div class="product-div flex space-between">
@@ -61,7 +61,7 @@
                     <p class="p-cat">category</p>
                     <p class="p-price">$1000</p>
                     <div class="flex column start" >
-                        <input type="checkbox">
+                        <input type="radio" id="" name="product">
                     </div>
                 </div>
             </div>
@@ -140,23 +140,42 @@
         <!-- end revenue section -->
 
         <!-- start discount section -->
-        <div class="discount-section" id="discount-section">
+        <div class="revenue-section" id="discount-section">
             <h1>Discount</h1>
             <div class="category-div">
                 <div class="category-header flex center-y space-evenly">
-                    <div>
-                        <button class="r-btn">This week</button>
-                        <button class="r-btn r-btn-e">This month</button>
-                        <button class="r-btn">This year</button>
+                    <div class="holder flex center-y">
+                        <input type="number" class="discount-in" name="" id="" placeholder="%" min="0" max="100">
+                        <select class="disc-sel" name="prod-name" id="prod-name" required>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <select class="disc-sel" name="user-name" id="user-name" required>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
                     </div>
-                    <button class="r-btn">Top 5</button>
+                    <button class="gener-disc">Generate Code</button>
                 </div>
             </div>
             <div class="grey-box">
-                <div class="in-grey-box flex column">
-                    <p>hiiiiiii</p>
-                    <p>hiiiiiii</p>
-                    <p>hiiiiiii</p>
+                <div class="in-grey-box1 flex column">
+                    <div class="flex space-between">
+                        <p>product-name</p>
+                        <p>username</p>
+                        <p>percentage</p>
+                        <p>code</p>
+                    </div>
+                    <div class="flex space-between">
+                        <p>product-name</p>
+                        <p>username</p>
+                        <p>percentage</p>
+                        <p>code</p>
+                    </div>
                 </div>
             </div>
         </div>

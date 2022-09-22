@@ -237,7 +237,7 @@
 }
   
 .form-container .btn {
-    background-color: #04AA6D;
+    background-color: #2565AE;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -245,10 +245,11 @@
     width: 100%;
     margin-bottom:10px;
     opacity: 0.8;
+    font-size: 20px;
 }
   
 .form-container .cancel {
-    background-color: red;
+    background-color: #2565AE;
 }
   
 .form-container .btn:hover, .open-button:hover {
@@ -304,7 +305,7 @@
     padding: 20px;
 }
 
-.in-grey-box{
+.in-grey-box, .in-grey-box1{
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -351,4 +352,35 @@
     color: #2565AE;
     background-color: white;
     margin-bottom: 10px;
+}
+
+/************************************************************/  
+/* discount section */
+.holder > input, select{
+    margin: 10px;
+}
+
+.discount-in{
+    height: 40px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.disc-sel{
+
+}
+
+.disc{
+    width: 150px;
+}
+
+.gener-disc{
+    width: 200px !important;
+}
+
+.in-grey-box1 > div{
+    background-color: white;
+    color: #2565AE;
+    margin-bottom: 10px;
+    padding: 0 10px;
 }
