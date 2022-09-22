@@ -168,7 +168,9 @@
 
 .product-div{
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #2565AE;
 }
 
 .product-div > img{
@@ -186,12 +188,7 @@
     height: 40px;
 }
 
-.p-desc{
-    width: 347px;
-    height: 40px;
-}
-
-.p-price, .p-disc{
+.p-price{
     width: 80px;
     height: 40px;
 }
@@ -226,7 +223,7 @@
     background-color: white;
 }
   
-.form-container input[type=text], .form-container input[type=number], select {
+.form-container input[type=text], .form-container input[type=number], select, .form-container input[type=file] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -234,7 +231,7 @@
     background: #f1f1f1;
 }
   
-.form-container input[type=text]:focus, .form-container input[type=number]:focus, select:focus {
+.form-container input[type=text]:focus, .form-container input[type=number]:focus, select:focus, .form-container input[type=file]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -319,6 +316,7 @@
     background-color: white;
     color: #2565AE;
     margin: 10px;
+    overflow: auto;
 }
 
 /************************************************************/  
