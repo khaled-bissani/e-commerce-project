@@ -6,9 +6,8 @@
   margin: 0%;
 }
 /* common classes*/
-body{
-    font-family: Arial, Helvetica, sans-serif;
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 .flex {
   display: flex;
@@ -29,11 +28,10 @@ body{
 
 /* navbar styles*/
 .navbar {
- 
   font-size: 25px;
   position: fixed;
   top: 0;
-  width: 100% ;
+  width: 100%;
   background-color: 2565AE;
 }
 .nav-cst img {
@@ -68,8 +66,8 @@ body{
   outline: none;
   font-size: 20px;
 }
- ::placeholder {
-    color: 2565AE;   
+::placeholder {
+  color: 2565AE;
 }
 .nav-fct .search-input {
   width: 50%;
@@ -77,7 +75,6 @@ body{
   background-color: white;
   border-radius: 30px;
   color: 2565AE;
-
 
   margin-left: 5vw;
 }
@@ -87,48 +84,116 @@ body{
   font-size: 20px;
   padding-right: 10px;
   padding-left: 1px;
-  
-
 }
 /* info styles*/
-.info{
- margin-top: 15.5vh;
- align-items: center;
-
+.info {
+  margin-top: 15.5vh;
+  align-items: center;
 }
-.profile-pic{
-  width: 400px;
-   height: 260px; 
-   align-items: center;
-  
-  
+.profile-pic {
+  width:30.5%;
+  height:40vh;
+  align-items: center;
 }
-.profile-pic img{
+.profile-pic img {
   border-radius: 100%;
+  width: 85%;
+  height: 95%;
 }
 .info-tab {
-  width: 1000px;
-  height: 260px;
+  margin-left: 20px;
+  width: 68%;
+  height:40vh;
   align-items: center;
   background-color: orange;
 }
 .info-item1 {
-  width:250px;
-  height:50px;
-  margin:5px;
-  background:white;
-  
- align-items: center;
+  width: 90%;
+  height: 25%;
+  margin: 10px;
+  background: white;
+
+  align-items: center;
   justify-content: center;
-  
+}
+.fir-clm-info{
+  width: 30% ;
+  height: 100%;
 }
 .info-item2 {
-  width:250px;
-  height:50px;
-  margin:5px;
-  background:white;
+  width: 90%;
+  height: 25%;
+  margin: 10px;
+  background: white;
   border-radius: 30px;
 
   align-items: center;
   justify-content: center;
+}
+/*features styles*/
+.features {
+  margin-top: 20px;
+}
+
+/* left section styles*/
+.left-sctn {
+  align-items: center;
+  background-color: orange;
+  width: 30.5%;
+  height: 40vh;
+}
+.left-sctn .box1 {
+  width: 90%;
+  height: 18%;
+  background-color: white;
+  margin: 10px;
+ 
+
+  align-items: center;
+  justify-content: center;
+}
+.left-sctn .disc-table {
+  width: 90%;
+  height: 70%;
+  margin: 5px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+ul {
+  height: 100%;
+}
+
+/* right section styles*/
+
+.right-sctn {
+ 
+  background-color: orange;
+  width: 68%;
+  height: 40vh;
+  margin-left: 20px;
+  align-items: center;
+}
+.right-sctn .box1 {
+  width:90%;
+  height: 18%;
+  background-color: white;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.right-sctn .disc-table {
+  width: 90%;
+  height: 70%;
+  margin: 5px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+ul {
+  height: 100%;
 }
