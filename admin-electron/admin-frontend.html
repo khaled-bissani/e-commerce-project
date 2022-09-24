@@ -5,6 +5,7 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <title>Admin</title>
     </head>
     <body>
@@ -56,15 +57,15 @@
                     <div class="results">
                         <div class="results-item blue">
                             <h1 class="title result-title">Products</h1>
-                            <p class="input" id="numberproduct">200</p>
+                            <p class="input" id="numberproduct">0</p>
                         </div>
                         <div class="results-item dodgerblue">
                             <h1 class="title result-title">Clients</h1>
-                            <p class="input" id="numberclient">300</p>
+                            <p class="input" id="numberclient">0</p>
                         </div>
                         <div class="results-item orange">
                             <h1 class="title result-title">Sellers</h1>
-                            <p class="input" id="numberseller">500</p>
+                            <p class="input" id="numberseller">0</p>
                         </div>
                     </div> 
                 </div>
@@ -130,5 +131,8 @@
         <script src="scripts/admin-frontend.js"></script>
         <script src="scripts/admin-clientform-frontend.js"></script>
         <script src="scripts/admin-sellerform-frontend.js"></script>
+        <script src="scripts/number_products.js"></script>
+        <script src="scripts/number_clients.js"></script>
+        <script src="scripts/number_seller.js"></script>
     </body>
 </html>
