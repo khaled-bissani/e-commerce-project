@@ -108,6 +108,14 @@ edit.addEventListener('click',()=>{
         error_edit.innerText='Please enter correct information!';
     }
     else{
+        const formEdit = new FormData();
+        formEdit.append('id',seller_id.value);
+        formEdit.append('name',edit_name.value);
+        formEdit.append('email',edit_email.value);
+        console.log(formEdit.get('id'));
+        axios.post('http://localhost/ecommerce-server/admin-backend/edit_seller.php',formEdit)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
         location.reload();
     }
 })
