@@ -1,1 +1,208 @@
 /* Khaled Saleh */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:  Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+/* top ad section */
+.landing-ads-header{
+    background-color: rgba(5, 131, 210, 1);
+    text-align: center;
+    padding: 7px 0;
+}
+
+/* the actions section */
+.actions{
+    display: flex;
+}
+
+.logo-div{
+    flex: 2;
+    display: flex;
+}
+.logo-img-container{
+    border: solid;
+    width: 10%;
+}
+
+.logo-img-container img{
+    width: 100%;
+}
+
+.landing-btn-container{
+    flex: 1;
+    display: flex;
+    margin: 10px 10px;
+}
+
+.align-span{
+    flex: 1;
+
+}
+
+.landing-btns-class{
+    flex: 0.5;
+}
+
+.action-btn{
+    margin-right: 10px;
+    color: white;
+    background-color: rgba(5, 131, 210, 1);
+    border-style: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+    transition-duration: 0.2s;
+}
+
+
+.ecommerce-name{
+    color: rgba(5, 131, 210, 1);
+}
+
+/* main content ads div and form div */
+.landing-main{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 2vh 0;
+    margin-bottom: 5vh;
+    border: solid;
+}
+
+.ads-section{
+    flex: 1;
+    margin: 5px 3vw;
+}
+
+.signup-form-div{
+    flex: 0.8;
+    display: block;
+    background-color: rgba(5, 131, 210, 1);
+    border-radius: 15px;
+    text-align: center;
+    padding: 1vh 0;
+    margin: 5px 3vw;
+}
+
+.frm{
+    display: block;
+}
+
+.inp{
+    font-size: 16px;
+    color: #2d3e50;
+    margin: 2vh;
+    padding: 2vh;
+    width: 70%;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: 0.5s;
+    outline: none;
+}
+
+.create-btn{
+    color: #2d3e50;
+    border: 1px solid #ced4da;
+    margin: 3vh;
+    padding: 1vh 3vh;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+.ad-description{
+    background-color: rgba(5, 131, 210, 1);
+    /* padding: 5px 1vw; */
+    padding: 0.5vh 0.5vw;
+    margin-left: 15px;
+    margin-top: 7vh;
+    width: 95%;
+    border-radius: 25px;
+}
+
+.ads-img-container img{
+    width: 100%;
+    height: 68%;
+    /* padding: 5px 1vw; */
+    border-radius: 10px;
+    border-style: none;
+}
+
+.signin-div{
+    flex: 0.8;
+    display: block;
+    background-color: rgba(5, 131, 210, 1);
+    border-radius: 15px;
+    text-align: center;
+    padding: 1vh 0;
+    margin: 5px 3vw;
+}
+
+/* footer */
+.landing-footer{
+    background-color: rgba(5, 131, 210, 1);
+    text-align: center;
+    padding: 7vh 0 1vh 0;
+}
+
+/* hovering */
+
+.action-btn:hover{
+    cursor: pointer;
+    padding: 8px 11px;
+    transition-duration: 0.2s;
+}
+
+.create-btn:hover{
+    cursor: pointer;
+    color: white;
+    border-color: white;
+    background-color: rgba(5, 131, 210, 1);
+    transition-duration: 0.2s;
+}
+
+.login-span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.no-display{
+    display: none;
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 950px){
+
+    .logo-img-container{
+        width: 20%;
+    }
+
+    .actions{
+        display: block;
+        width: 100%;
+        align-items: center;
+    }
+
+    .landing-btn-container{
+        display: block;
+    }
+
+    .landing-btns-class{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .landing-main{
+        display: block;
+        width: 100%;
+        margin: 5px 5px 5px -2px;
+        align-items: center;
+    }
+    .ad-description{
+        margin: 1vh 0 3vh 0;
+    }
+}
