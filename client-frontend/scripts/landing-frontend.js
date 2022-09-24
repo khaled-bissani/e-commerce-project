@@ -87,18 +87,17 @@ function checkSignup(){
     }
 
     else{
-        localStorage.setItem("fullname",fname.value);
-        localStorage.setItem("email",email.value);
-        localStorage.setItem("username",username.value);
-        localStorage.setItem("password",password.value);
-        
-        fname.value = '';
-        username.value = '';
-        password.value = '';
-        confirmpassword.value = ''
-        email.value = '';
-        console.log('success');
-        // console.log(localStorage.getItem('fullname'));
+        const formData = new FormData();
+        formData.append('fname',fname.value);
+        formData.append("email", email.value);
+        formData.append("username", username.value);
+        formData.append("password", password.value);
+
+        axios.post('http://localhost/ecommerce-server/register.php',formData)
+        .then(res => console.log(res))
+        .catch(err =>console.log(err));
+
+        window.location.replace('home-frontend.html');
     }
 }
 
