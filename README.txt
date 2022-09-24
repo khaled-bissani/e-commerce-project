@@ -1,1 +1,0 @@
-Initializing the folders and files

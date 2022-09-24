@@ -1,1 +1,189 @@
-<!-- Hicham Hachem -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller</title>
+    <link rel="stylesheet" href="styles/seller-frontend.css">
+    <script src="https://kit.fontawesome.com/664588e5d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container flex">
+        <!-- start left section -->
+        <div class="left-section flex column">
+            <h1 class="seller-name">Seller name</h1>
+            <div class="left-div flex column">
+                <div class="div-logo flex" id="home">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Home</p>
+                </div>
+                <div class="div-logo flex" id="category">
+                    <i class="fa-solid fa-shapes"></i>
+                    <p>Category</p>
+                </div>
+                <div class="div-logo flex" id="revenue">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <p>Revenue</p>
+                </div>
+                <div class="div-logo flex" id="discount">
+                    <i class="fa-solid fa-percent"></i>
+                    <p>Discount</p>
+                </div>
+            </div>
+        </div>
+        <!-- end left section -->
+
+        <!-- start home section -->
+        <div class="section home-section" id="home-section">
+            <h1 class="outer-text">Home</h1>
+            <div class="bar-div flex center-y space-around">
+                <p>My products</p>
+                <div class="btn-div">
+                    <button class="btn-menu" id="btn-add">Add</button>
+                    <button class="btn-menu btn-e">Edit</button>
+                    <button class="btn-menu">Delete</button>
+                </div>
+            </div>
+            <div class="div-table flex column">
+                <div class="product-div flex space-between">
+                    <img src="assets/charbel.png" alt="">
+                    <p class="p-name">product name</p>
+                    <p class="p-cat">category</p>
+                    <p class="p-price">$1000</p>
+                    <div class="flex column start" >
+                        <input type="radio" id="" name="product">
+                    </div>
+                </div>
+                <div class="product-div flex space-between">
+                    <img src="assets/charbel.png" alt="">
+                    <p class="p-name">product name</p>
+                    <p class="p-cat">category</p>
+                    <p class="p-price">$1000</p>
+                    <div class="flex column start" >
+                        <input type="radio" id="" name="product">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start popup form -->
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Add product</h1>
+
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter name" name="name" required>
+
+                <label for="price"><b>Price</b></label>
+                <input type="number" placeholder="Price" name="price" required>
+
+                <select name="Category" id="category" required>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+                <input type="file" name="" id="image">
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" id="btn-close">Close</button>
+            </form>
+        </div>
+        <!-- end popup form -->
+        <!-- end home section -->
+
+        <!-- start category section -->
+        <div class="category-section flex column" id="category-section">
+            <h1>Category</h1>
+            <div class="category-div">
+                <div class="category-header flex center-y space-evenly">
+                    <input type="text" name="" id="" placeholder="Enter new category">
+                    <button>Add</button>
+                </div>
+            </div>
+            <div class="grey-box">
+                <div class="in-grey-box flex space-evenly wrap">
+                    <div>a</div>
+                    <div>a</div>
+                    <div>a</div>
+                    <div>a</div>
+                </div>
+            </div>
+        </div>
+        <!-- end category section -->
+
+        <!-- start revenue section -->
+        <div class="revenue-section" id="revenue-section">
+            <h1>Revenue</h1>
+            <div class="category-div">
+                <div class="category-header flex center-y space-evenly">
+                    <div>
+                        <button class="r-btn">This week</button>
+                        <button class="r-btn r-btn-e">This month</button>
+                        <button class="r-btn">This year</button>
+                    </div>
+                    <button class="r-btn">Top 5</button>
+                </div>
+            </div>
+            <div class="grey-box">
+                <div class="in-grey-box flex column">
+                    <p>hiiiiiii</p>
+                    <p>hiiiiiii</p>
+                    <p>hiiiiiii</p>
+                    <p>hiiiiiii</p>
+                    <p>hiiiiiii</p>
+                    <p>hiiiiiii</p>
+                    <p>hiiiiiii</p>
+                    <p>hiiiiiii</p>
+                </div>
+            </div>
+        </div>
+        <!-- end revenue section -->
+
+        <!-- start discount section -->
+        <div class="revenue-section" id="discount-section">
+            <h1>Discount</h1>
+            <div class="category-div">
+                <div class="category-header flex center-y space-evenly">
+                    <div class="holder flex center-y">
+                        <select class="disc-sel" name="prod-name" id="prod-name" required>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <select class="disc-sel" name="user-name" id="user-name" required>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <input type="number" class="discount-in" name="" id="" placeholder="%" min="0" max="100">
+                        <input type="text" class="discount-in" name="" id="" placeholder="Code">
+                    </div>
+                    <button class="gener-disc">Generate Code</button>
+                </div>
+            </div>
+            <div class="grey-box">
+                <div class="in-grey-box1 flex column">
+                    <div class="flex space-between">
+                        <p>product-name</p>
+                        <p>username</p>
+                        <p>percentage</p>
+                        <p>code</p>
+                    </div>
+                    <div class="flex space-between">
+                        <p>product-name</p>
+                        <p>username</p>
+                        <p>percentage</p>
+                        <p>code</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end discount section -->
+    </div>
+
+    <script src="scripts/seller-frontend.js"></script>
+    
+</body>
+</html>
