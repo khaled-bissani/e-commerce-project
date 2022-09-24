@@ -86,14 +86,21 @@ axios.get('http://localhost/ecommerce-server/admin-backend/get_seller.php').then
     }    
 }
 
+//add new seller
 add.addEventListener('click',()=>{
     if(seller_name.value == '' || seller_username.value == '' || seller_email.value == ''){
         error_add.innerText='Please enter correct information!';
     }
     else{
+        const formData = new FormData();
+        formData.append('name',seller_name.value);
+        formData.append('user_name',seller_username.value);
+        formData.append('email',seller_email.value);
+        axios.post('http://localhost/ecommerce-server/admin-backend/add_seller.php',formData)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
         location.reload();
     }
-
 })
 
 edit.addEventListener('click',()=>{
