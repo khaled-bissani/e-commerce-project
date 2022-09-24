@@ -163,9 +163,16 @@ ul a:hover{
 }
 .item-information{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
+.item-information > p:first-child{
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/* .item */
 .yellow-star{
     color: #D5AB55;
 }
