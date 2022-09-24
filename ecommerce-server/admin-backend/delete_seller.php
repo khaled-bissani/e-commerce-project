@@ -11,7 +11,7 @@ if (
 ) {
   $id = $_POST["user_id"];
   $query = $mysqli->prepare("DELETE FROM users WHERE id = ?;");
-  $query->bind_param("i", $user_id);
+  $query->bind_param("i", $id);
 
   if ($query->execute()) {
     $done = true;
