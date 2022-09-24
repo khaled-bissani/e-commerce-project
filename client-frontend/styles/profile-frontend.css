@@ -1,0 +1,269 @@
+/* Madyan Chmaysem */
+
+/* Reseting browser defaults*/
+* {
+  padding: 0%;
+  margin: 0%;
+}
+/* common classes*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.flex {
+  display: flex;
+}
+
+.flex-space-around {
+  justify-content: space-around;
+}
+.flex-space-evenly {
+  justify-content: space-evenly;
+}
+.align-items-center {
+  align-items: center;
+}
+.dir-column {
+  flex-direction: column;
+}
+
+/* navbar styles*/
+.navbar {
+  font-size: 25px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: 2565AE;
+}
+.nav-cst img {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  margin-top: 2vh;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+}
+.navbar p {
+  margin-top: 2vh;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+  padding-top: 20px;
+  color: white;
+}
+.nav-fct a {
+  margin-top: 2vh;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.nav-fct input {
+  margin-top: 2vh;
+  margin-bottom: 15px;
+  width: 75%;
+  height: 4vh;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+::placeholder {
+  color: 2565AE;
+}
+.nav-fct .search-input {
+  width: 50%;
+  height: 6vh;
+  background-color: white;
+  border-radius: 30px;
+  color: 2565AE;
+
+  margin-left: 5vw;
+}
+.search-input > i {
+  margin-left: 20px;
+  color: 2565AE;
+  font-size: 20px;
+  padding-right: 10px;
+  padding-left: 1px;
+}
+/* info styles*/
+.info {
+  margin-top: 15.5vh;
+  align-items: center;
+}
+.profile-pic {
+  width:30.5%;
+  height:40vh;
+  align-items: center;
+}
+.profile-pic img {
+  border-radius: 100%;
+  margin: 15px;
+  width: 75%;
+  height: 85%;
+}
+.info-tab {
+  margin-left: 20px;
+  width: 68%;
+  height:40vh;
+  align-items: center;
+  background-color: orange;
+  border-radius: 10px;
+}
+.info-item1 {
+  width: 90%;
+  height: 25%;
+  margin: 15px;
+  background: white;
+  border-radius: 10px;
+
+  align-items: center;
+  justify-content: center;
+}
+.fir-clm-info{
+  width: 30% ;
+  height: 100%;
+}
+
+/*features styles*/
+.features {
+  margin-top: 20px;
+}
+
+/* left section styles*/
+.left-sctn {
+  align-items: center;
+  background-color: orange;
+  width: 30.5%;
+  height: 40vh;
+  border-radius: 10px;
+
+}
+.left-sctn .box1 {
+  width: 90%;
+  height: 18%;
+  background-color: white;
+  margin: 15px;
+  border-radius: 10px;
+
+ 
+
+  align-items: center;
+  justify-content: center;
+}
+.left-sctn .disc-table {
+  width: 90%;
+  height: 70%;
+  margin: 5px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  border-radius: 10px;
+
+}
+
+ul {
+  height: 100%;
+}
+
+/* right section styles*/
+
+.right-sctn {
+ 
+  background-color: orange;
+  width: 68%;
+  height: 40vh;
+  margin-left: 20px;
+  align-items: center;
+  border-radius: 10px;
+
+}
+.right-sctn .box1 {
+  width:90%;
+  height: 18%;
+  background-color: white;
+  margin: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+}
+.right-sctn .disc-table {
+  width: 90%;
+  height: 70%;
+  margin: 5px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  border-radius: 10px;
+
+}
+
+@media screen and (max-width: 500px) {
+  .info{
+    flex-direction: column;
+    
+  }
+  
+  .info-tab{
+    width: 95%;
+    margin: 10px;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .fir-clm-info{
+    width: 95%;
+    margin-right: 30px;
+  }
+  .info-item1{
+    width: 100%;
+    height: 40px;
+  }
+ 
+  .profile-pic{
+    width: 90%;
+  }
+   .features{
+    flex-direction: column  ;
+  }
+  .left-sctn{
+    width: 95%;
+    margin: 10px;
+    height: fit-content;
+  }
+  .right-sctn{
+    flex-direction: column;
+    margin: 10px;
+    width: 95%;
+    height: fit-content;
+    
+  }
+  .left-sctn .box1 {
+    width: 90%;
+    height: 40px;
+    
+   
+  }
+  .left-sctn .disc-table {
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+    margin-bottom: 20px;
+   
+  
+  }
+  .right-sctn .disc-table {
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+    margin-bottom: 20px;
+  
+  }
+  .right-sctn .box1 {
+    width: 90%;
+    height: 40px;
+  }
+
+
+}

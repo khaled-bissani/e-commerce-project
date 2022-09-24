@@ -1,0 +1,100 @@
+<!-- Madyan Chmaysem -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/profile-frontend.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container flex dir-column">
+      <!--Starting navbar section-->
+      <section>
+        <div class="navbar flex flex-space-around">
+          <div class="nav-cst flex flex-space-evenly">
+            <img src="./assets/default.jpg" alt="" />
+
+            <p>E-commerce name</p>
+          </div>
+
+          <div class="nav-fct flex flex-space-evenly align-items-center">
+            <a href="">Home</a>
+            <a href="">Profile</a>
+            <div class="search-input flex align-items-center">
+              <i for="" class="fa fa-search"></i>
+
+              <input type="text" placeholder="search" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- starting info section-->
+      <section>
+        <div>
+        <div class="info  flex">
+          <div class="profile-pic flex flex-space-around">
+            <img src="./assets/profile.png" alt="" />
+          </div>
+          <div class="info-tab flex flex-space-around">
+            <div class="fir-clm-info flex dir-column">
+              <p class="info-item1 flex">Name</p>
+              <p class="info-item1 flex">User-name</p>
+              <p class="info-item1 flex">Email</p>
+            </div>
+            <div class="fir-clm-info flex dir-column">
+              <p class="info-item1 flex">Birth-day</p>
+              <p class="info-item1 flex">Join date</p>
+              <p class="info-item1 flex">Region/location</p>
+            </div>
+            <div class="fir-clm-info flex dir-column">
+              <p class="info-item1 flex">Phone nb</p>
+              <button class="info-item1 flex">Reset password</button>
+              <button class="info-item1 flex">Edit profile info</button>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- starting features section-->
+      <section>
+        <div class="features flex ">
+          <div class="left-sctn flex dir-column">
+            
+              <p class="box1 flex">Discount</p>
+            
+            <div class="disc-table flex dir-column">
+              <ul id="disc-list"></ul>
+            </div>
+          </div>
+          <div class="right-sctn flex  ">
+            <div class="right-sctn flex dir-column">
+              
+                <p class="box1 flex">whichlist</p>
+              
+              <div class="disc-table flex dir-column">
+                <ul >                                 
+                  </ul>
+              </div>
+            </div>
+            <div class="right-sctn flex dir-column" >
+              
+                <p class="box1 flex">favorite</p>
+              
+              <div class="disc-table flex dir-column">
+                <ul>
+               </ul>
+              </div>
+            </div>        
+        </div>
+      </div>
+      </section>
+      
+    </div>
+    <script src="./scripts/profile-frontend.js"></script>
+  </body>
+</html>
