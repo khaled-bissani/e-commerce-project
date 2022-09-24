@@ -7,7 +7,7 @@ window.onload = function() {
                         itemContainer.innerHTML+= `
                         <div id="item" class="items">
                             <div class="item-image">
-                                <img src="${res.data[i].image}" />
+                                <img src="http://localhost/ecommerce-server/${res.data[i].image}" />
                             </div>
                             <div class="item-information">
                                 <p>${res.data[i].name}</p>
