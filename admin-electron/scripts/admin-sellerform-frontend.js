@@ -103,6 +103,7 @@ add.addEventListener('click',()=>{
     }
 })
 
+//edit seller information
 edit.addEventListener('click',()=>{
     if(edit_name.value == '' || edit_email.value == ''){
         error_edit.innerText='Please enter correct information!';
@@ -119,3 +120,15 @@ edit.addEventListener('click',()=>{
         location.reload();
     }
 })
+
+
+delete_button.addEventListener('click',()=>{
+        const formDelete = new FormData();
+        formDelete.append('user_id',seller_id.value);
+        console.log(formDelete.get('user_id'));
+        axios.post('http://localhost/ecommerce-server/admin-backend/delete_seller.php',formDelete)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
+        //location.reload();
+    })
+
