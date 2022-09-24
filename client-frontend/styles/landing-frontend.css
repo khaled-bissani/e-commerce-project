@@ -1,15 +1,15 @@
-/* Khaled Saleh */
-
 body{
     margin: 0;
     padding: 0;
     font-family:  Arial, Helvetica, sans-serif;
     color: white;
 }
-
+:root{
+    --primary-color: #2565AE;
+}
 /* top ad section */
 .landing-ads-header{
-    background-color: rgba(5, 131, 210, 1);
+    background-color: var(--primary-color);
     text-align: center;
     padding: 7px 0;
 }
@@ -42,26 +42,18 @@ body{
     flex: 1;
 
 }
-
-.landing-btns-class{
-    flex: 0.5;
-}
-
 .action-btn{
     margin-right: 10px;
     color: white;
-    background-color: rgba(5, 131, 210, 1);
+    background-color: var(--primary-color);
     border-style: none;
     border-radius: 10px;
     padding: 7px 10px;
     transition-duration: 0.2s;
 }
-
-
 .ecommerce-name{
-    color: rgba(5, 131, 210, 1);
+    color: var(--primary-color);
 }
-
 /* main content ads div and form div */
 .landing-main{
     display: flex;
@@ -72,26 +64,22 @@ body{
     margin-bottom: 5vh;
     border: solid;
 }
-
 .ads-section{
     flex: 1;
     margin: 5px 3vw;
 }
-
 .signup-form-div{
     flex: 0.8;
     display: block;
-    background-color: rgba(5, 131, 210, 1);
+    background-color: var(--primary-color);
     border-radius: 15px;
     text-align: center;
     padding: 1vh 0;
     margin: 5px 3vw;
 }
-
 .frm{
     display: block;
 }
-
 .inp{
     font-size: 16px;
     color: #2d3e50;
@@ -103,7 +91,6 @@ body{
     transition: 0.5s;
     outline: none;
 }
-
 .create-btn{
     color: #2d3e50;
     border: 1px solid #ced4da;
@@ -112,9 +99,8 @@ body{
     border-radius: 5px;
     transition-duration: 0.2s;
 }
-
 .ad-description{
-    background-color: rgba(5, 131, 210, 1);
+    background-color: var(--primary-color);
     /* padding: 5px 1vw; */
     padding: 0.5vh 0.5vw;
     margin-left: 15px;
@@ -122,7 +108,6 @@ body{
     width: 95%;
     border-radius: 25px;
 }
-
 .ads-img-container img{
     width: 100%;
     height: 68%;
@@ -130,51 +115,42 @@ body{
     border-radius: 10px;
     border-style: none;
 }
-
 .signin-div{
     flex: 0.8;
     display: block;
-    background-color: rgba(5, 131, 210, 1);
+    background-color: var(--primary-color);
     border-radius: 15px;
     text-align: center;
     padding: 1vh 0;
     margin: 5px 3vw;
 }
-
 /* footer */
 .landing-footer{
-    background-color: rgba(5, 131, 210, 1);
+    background-color: var(--primary-color);
     text-align: center;
     padding: 7vh 0 1vh 0;
 }
-
 /* hovering */
-
 .action-btn:hover{
     cursor: pointer;
     padding: 8px 11px;
     transition-duration: 0.2s;
 }
-
 .create-btn:hover{
     cursor: pointer;
     color: white;
     border-color: white;
-    background-color: rgba(5, 131, 210, 1);
+    background-color: var(--primary-color);
     transition-duration: 0.2s;
 }
-
 .login-span:hover{
     cursor: pointer;
     text-decoration: underline;
 }
-
 .no-display{
     display: none;
 }
-
 /* responsiveness */
-
 @media screen and (max-width: 950px){
 
     .logo-img-container{
