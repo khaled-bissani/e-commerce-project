@@ -260,8 +260,8 @@ ul a:hover{
 .item-shop-image > img{
     width: 100%;
 }
-.item-name > p{
-    font-size: 12px;
+.item-shop-image > p{
+    font-size: 14px;
 }
 .item-quantity{
    width: 10%;
@@ -273,6 +273,23 @@ ul a:hover{
 .cart-checkout{
     width: 35%;
     border:1px solid #E5E5E5;
+}
+.discount-option > h2{
+    font-size: 16px;
+    color: #9DA7B3;
+}
+.insert-discount{
+    display: flex;
+}
+.insert-discount > input{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+}
+.insert-discount > button{
+    width: 50px;
+    font-size: 10px;
+    /* background-color: #000; */
 }
 /* Utilities */
 .container{
