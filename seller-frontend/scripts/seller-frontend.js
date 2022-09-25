@@ -36,6 +36,8 @@ const edit_button=document.querySelector('#edit');
 const erroradd=document.querySelector('#error-add');
 const erroredit=document.querySelector('#error-edit');
 
+const showcategory=document.querySelector('#show-category');
+
 addproduct.addEventListener('click',()=>{
     addform.style.display='block';
     main.classList.add('blocked');
@@ -156,3 +158,13 @@ deleteproduct.addEventListener('click',()=>{
         .catch(err=>console.log(err));
         location.reload();
 })
+
+
+axios.get('http://localhost/ecommerce-server/seller-backend/view_category.php').then((response) => {
+  for(var p=0;p<response.data.length;p++){
+    let form=`<p class="show-text">${response.data[p].id}. ${response.data[p].name}</p>`;
+    showcategory.innerHTML+=form;
+  }
+  }).catch((error)=> {
+      console.log('rejected',error);
+  })
