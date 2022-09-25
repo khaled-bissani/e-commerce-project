@@ -1,6 +1,7 @@
-localStorage.setItem('data', 22);
+const userInfo = localStorage.getItem('seller_id');
 
-var userInfo = localStorage.getItem('data');
+const home=document.querySelector('#to-home');
+const revenue=document.querySelector('#to-revenue');
 
 const addproduct=document.querySelector('#add-product');
 const editproduct=document.querySelector('#edit-product');
@@ -36,6 +37,21 @@ const erroradd=document.querySelector('#error-add');
 const erroredit=document.querySelector('#error-edit');
 
 const showcategory=document.querySelector('#show-category');
+
+const home_form=document.querySelector('#home');
+const revenue_form=document.querySelector('#revenue');
+
+const logoutseller=document.querySelector('#logout-seller');
+
+home.addEventListener('click',()=>{
+    home_form.style.display='block';
+    revenue_form.style.display='none';
+})
+
+revenue.addEventListener('click',()=>{
+    revenue_form.style.display='block';
+    home_form.style.display='none';
+})
 
 addproduct.addEventListener('click',()=>{
     addform.style.display='block';
@@ -176,4 +192,9 @@ axios.get('http://localhost/ecommerce-server/seller-backend/view_category.php').
   }
   }).catch((error)=> {
       console.log('rejected',error);
+  })
+
+  logoutseller.addEventListener('click',()=>{
+    window.localStorage.clear();
+    window.location.replace('../client-frontend/landing-frontend.html');
   })
