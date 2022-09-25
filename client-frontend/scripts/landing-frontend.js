@@ -123,25 +123,41 @@ function checkLogin(){
 
         let enter=false
         let ban=false
+        let seller=false 
+        let client=false
         
         axios.post('http://localhost/ecommerce-server/login.php')
                 .then(res => {
                     for(let i=0; i<res.data.length; i++){
                         if(res.data[i].username == usernameLogin && res.data[i].password==passwordLogin){
-                            localStorage.setItem('currentUserId' , res.data[i].id)
-                            if (res.data[i].is_banned==0){
+                            if(res.data[i].types_id==2){
+                                localStorage.setItem('currentSellerId' , res.data[i].id)
                                 enter=true
+                                seller=true
                             }
                             else{
-                                ban=true;
+                                localStorage.setItem('currentUserId' , res.data[i].id)
+                                if (res.data[i].is_banned==0){
+                                    enter=true
+                                    client=true
+                                }
+                                else{
+                                    ban=true;
+                                }
                             }
+                            
                         }}
                     if (ban){
                         document.getElementById('wrong-info').style.color = "red";
                         document.getElementById('wrong-info').innerText = "You are banned!";
                     }
                     else if(enter){
-                        window.location.replace('home-frontend.html');
+                        if(seller){
+                            window.location.replace('../seller-frontend/seller-frontend.html');
+                        }
+                        else if(client){
+                            window.location.replace('home-frontend.html');
+                        }
                     }
                     else{
                         document.getElementById('wrong-info').style.color = "red";

@@ -20,6 +20,7 @@ voucherBtn.onclick = function() {
     voucherPopup.style.display = "block";
     cartPopup.style.display = "none";
     searchPopup.style.display = "none";
+    chatPopup.style.display = "none";
 }
 closeVoucher.onclick = function() {
     voucherPopup.style.display = "none";
@@ -33,6 +34,7 @@ cartBtn.onclick = function() {
     cartPopup.style.display = "block";
     voucherPopup.style.display = "none";
     searchPopup.style.display = "none";
+    chatPopup.style.display = "none";
 }
 closeCart.onclick = function() {
     cartPopup.style.display = "none";
