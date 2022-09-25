@@ -80,6 +80,20 @@
         <div id="search-popup" class="searchpopup">
             <button id="close-search">&times;</button>
         </div>
+        <!-- Chat popup -->
+        <div id="chat-popup" class="seller-container chatpopup">
+            <button id="close-chat">&times;</button>
+            <h1>Chat</h1><i class="refresh fa fa-refresh"></i>
+            <div class="send-message">
+                <label>Send message</label>
+                <textarea></textarea>
+            </div>
+            <div class="receive-message">
+                <label>Receive message</label>
+                <textarea></textarea>
+            </div>
+            <button class="send">Send</button>
+        </div>
         <!-- End popup section -->
         <!-- Start Nav bar section -->
         <nav>
@@ -105,8 +119,8 @@
             <p>Voucher</p>
             <i id="cart-btn" class="fa fa-shopping-cart"></i>
             <p>Cart</p>
-            <i class="fa fa-list-alt"></i>
-            <p>Wishlist</p>
+            <i id="chat-btn" class="fa fa-comment"></i>
+            <p>Chat</p>
             <i id="logout" class="fa fa-right-from-bracket"></i>
             <p>Logout</p>
         </div>
@@ -119,6 +133,7 @@
         <script src="scripts/home-frontend.js"></script>
         <script src="scripts/retreive-product.js"></script>
         <script src="scripts/search.js"></script>
+        <script src="scripts/chat.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </body>
 </html>
