@@ -1,1 +1,73 @@
-<!-- Madyan Chmaysem -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./styles/profile-frontend.css" />
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- popup -->
+    <div id="edit-popup" class="edit-container popup">
+      <button id="close-edit">&times;</button>
+      <h1>Edit</h1>
+      <div class="profile-name">
+          <label>Name</label>
+          <input id="pname" type="text" />
+      </div>
+      <div class="profile-username">
+          <label>Username</label>
+          <input id="pusername" type="text" />
+      </div>
+      <div class="profile-email">
+          <label>Email</label>
+          <input id="pemail" type="text" />
+      </div>
+      <div class="profile-number">
+          <label>Phone number</label>
+          <input id="pnumber" type="text" />
+      </div>
+      <button class="edit-profile">Edit</button>
+  </div>
+    <!-- end popup -->
+    <div class="main-container flex dir-column">
+       <!-- Start Nav bar section -->
+       <nav>
+        <label for="check" class="checkbtn">Menu</label>
+        <input type="checkbox" id="check" value="Menu"/>
+        <label class="ecommerce-name"><i class="fa fa-angle-right"></i><i class="fa fa-grip-lines-vertical"></i><i class="fa fa-angle-left"></i>Double-K</label>
+        <ul>
+            <li><a class="active" href="home-frontend.html">Home</a></li>
+            <li><a href="profile-frontend.html">Profile</a></li>
+            <li>
+                <div class="search-button">
+                    <i class="fa fa-search"></i>
+                    <input type="text" placeholder="Search" id="home-search-btn" ></input>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Nav bar section -->
+      <!-- starting info section-->
+      <section>
+        <div class="info  flex">
+          <div class="fir-clm-info flex dir-column">
+          </div> 
+        </div>
+        <div class="info1 ">
+          <button class="info-item2 flex">Reset password</button>
+            <button id="edit-btn" class="info-item2 flex">Edit profile info</button>
+        </div>
+            
+      </section>
+      
+    </div>
+    <script src="scripts/profile-frontend.js"></script>
+    <script src="scripts/edit_profile.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </body>
+</html>

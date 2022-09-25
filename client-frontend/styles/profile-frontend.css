@@ -1,1 +1,476 @@
-/* Madyan Chmaysem */
+/* Reseting browser defaults*/
+:root{
+  --primary-color: #2565AE
+}
+* {
+  padding: 0%;
+  margin: 0%;
+}
+/* common classes*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+img{
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-space-around {
+  justify-content: space-around;
+}
+.flex-space-evenly {
+  justify-content: space-evenly;
+}
+.align-items-center {
+  align-items: center;
+}
+.dir-column {
+  flex-direction: column;
+}
+/* Popup */
+.popup{
+  background-color: #ffffff;
+  width: 700px;
+  height: 350px;
+  padding: 30px 40px;
+  position: fixed;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 10%;
+  border-radius: 8px;
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 200px;
+  overflow-y: auto;
+}
+.popup > button:first-child{
+  display: block;
+  margin:  0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #ffffff;
+  background: var(--primary-color);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.editpopup i{
+  cursor: pointer;
+}
+.edit-profile{
+  font-size: 20px;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 50px;
+  padding: 10px 15px;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.edit-container label{
+  font-size: 25px;
+}
+.edit-container input{
+  font-size: 20px;
+}
+.profile-name{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-name > input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+.profile-username{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-username > input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+.profile-email{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-email > input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+.profile-number{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-number > input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+/* Nav bar */
+nav{
+  background: var(--primary-color);
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.ecommerce-name{
+  color: white;
+  font-size: 25px;
+  line-height: 80px;
+  padding: 20px 50px;
+  font-weight: bold;
+  cursor: pointer;
+}
+label > i:first-child{
+  margin-right: 3px;
+}
+label > i:last-child{
+  margin-left: 3px;
+  margin-right: 15px;
+}
+nav ul{
+  float: right;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 8px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+ul a:hover{
+  color: rgb(45, 62, 80);
+  transition: .5s;
+}
+.search-button{
+  display: flex;
+  justify-content: start;
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  background-color: #fff;
+  font-size: 20px;
+  color:var(--primary-color);
+  padding-left: 20px;
+  margin-left: 50px;
+  margin-right: 37px;
+}
+.search-button > i{
+  font-size: 19px;
+  color: var(--primary-color);
+  padding-top: 9px;
+  cursor: pointer;
+}
+.search-button > input{
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding-left: 10px;
+  font-size: 16px;
+  width: 90%;
+  color: var(--primary-color);
+}
+.search-button > input::placeholder{
+  color: var(--primary-color);
+}
+/* Hamburger menu */
+.checkbtn{
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+/* info styles*/
+.info {
+  margin-top: 15.5vh;
+  align-items: center;
+}
+.profile-pic {
+  width:20%;
+  align-items: center;
+  border-radius: 50%;
+}
+.profile-pic > img {
+  border-radius: 50%;
+  margin: 15px 15px 15px 70px;
+  width: 100%;
+}
+.info-tab {
+  margin-left: 150px;
+  width: 68%;
+  height:40vh;
+  align-items: center;
+  border-radius: 10px;
+}
+.info-item1 {
+  width: 90%;
+  height: 25%;
+  margin: 15px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #2565AE;
+  align-items: center;
+  justify-content: center;
+}
+.info1{
+  display: flex;
+  justify-content: start;
+  margin-top: -100px;
+  margin-left: 515px;
+}
+.info-item2 {
+  width: 30%;
+  height: 60px;
+  margin: 15px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #2565AE;
+  align-items: center;
+  justify-content: center;
+}
+.info1 > .info-item2:last-child{
+  margin-left: 195px;
+}
+.fir-clm-info{
+  width: 30% ;
+  height: 100%;
+  display: flex;
+}
+.info-item2:hover{
+  background-color: #2565AE;
+  color: #fff;
+  cursor: pointer;
+}
+/*features styles*/
+.features {
+  margin-top: 20px;
+}
+/* left section styles*/
+.left-sctn {
+  align-items: center;
+  width: 30.5%;
+  height: 40vh;
+  border-radius: 10px;
+}
+.left-sctn .box1 {
+  width: 90%;
+  height: 18%;
+  background-color: white;
+  margin: 15px;
+  border-radius: 10px;
+  border: 1px solid #2565AE;
+  align-items: center;
+  justify-content: center;
+}
+.left-sctn .disc-table {
+  width: 90%;
+  height: 70%;
+  margin: 5px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  border-radius: 10px;
+  border: 1px solid #2565AE;
+}
+ul {
+  height: 100%;
+}
+/* right section styles*/
+.right-sctn {
+  width: 68%;
+  height: 40vh;
+  margin-left: 20px;
+  align-items: center;
+  border-radius: 10px;
+
+}
+.right-sctn .box1 {
+  width:90%;
+  height: 18%;
+  background-color: white;
+  margin: 15px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #2565AE;
+}
+.right-sctn .disc-table {
+  width: 90%;
+  height: 70%;
+  margin: 5px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  border-radius: 10px;
+  border: 1px solid #2565AE;
+}
+/* Media query */
+@media (max-width: 952px){
+  .ecommerce-name{
+      font-size: 30px;
+      padding-left: 50px;
+  }
+  nav ul li a{
+      font-size: 16px;
+  }
+  nav ul {
+      z-index: 0;
+  }
+  .item-section{
+      padding: 0;
+  }
+  .container{
+      padding-left: 40px;
+      padding-right: 10px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+      display: block;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  ul{
+      position: fixed;
+      width: 100%;
+      height: 50vh;
+      background: var(--primary-color);
+      top: -80%;
+      text-align: center;
+      transition: all .5s;
+  }
+  nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+  }
+  nav ul li a{
+      font-size: 20px;
+
+  }
+  #check:checked ~ ul{
+      top: 80px;
+  }
+  nav ul {
+      z-index: 0;
+  }
+  .search-button{
+      margin-left: 330px;
+  }
+}
+@media (max-width: 500px){
+  .container{
+      padding-left:70px;
+      padding-right:70px;
+  }
+  .ecommerce-name{
+      font-size: 25px;
+  }
+  ul{
+      height: 40vh;
+  }
+  nav ul li a{
+      font-size: 18px;
+  }
+  nav ul li{
+      margin: 30px 0;
+  }
+  nav ul {
+      z-index: 0;
+  }
+  .info{
+    flex-direction: column;
+  }
+  .info-tab{
+    width: 95%;
+    margin: 10px;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .fir-clm-info{
+    width: 95%;
+    margin-right: 30px;
+  }
+  .info-item1{
+    width: 100%;
+    height: 40px;
+  }
+  .profile-pic{
+    width: 25%;
+    height: 100%;
+  }
+   .features{
+    flex-direction: column  ;
+  }
+  .left-sctn{
+    width: 95%;
+    margin: 10px;
+    height: fit-content;
+  }
+  .right-sctn{
+    flex-direction: column;
+    margin: 10px;
+    width: 95%;
+    height: fit-content;
+    
+  }
+  .left-sctn .box1 {
+    width: 90%;
+    height: 40px;
+  }
+  .left-sctn .disc-table {
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  .right-sctn .disc-table {
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  .right-sctn .box1 {
+    width: 90%;
+    height: 40px;
+  }
+}
