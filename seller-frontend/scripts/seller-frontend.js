@@ -1,3 +1,8 @@
+localStorage.setItem('data', 1);
+
+var userInfo = localStorage.getItem('data');
+
+
 const addproduct=document.querySelector('#add-product');
 const editproduct=document.querySelector('#edit-product');
 const deleteproduct=document.querySelector('#delete-product');
@@ -89,20 +94,41 @@ for(var i=0; i < table.rows.length; i++){
     }
 }
 
-add.addEventListener('click',()=>{
+
+const reader = new FileReader();
+const formData = new FormData();
+
+add.addEventListener("click", () => {
+    //check if data is not empty
     if(productname.value == '' || productprice == '' || productcategory == '' || image.value == ''){
         erroradd.innerText='Please enter all information';
     }
-    else{
+    else{// convert image to base64 
+        reader.addEventListener("load", () => {
+        formData.append("image", reader.result);
+        addProduct();
+    });
+        reader.readAsDataURL(image.files[0]);
+    }
+  });
+
+    // add new product
+    const addProduct = () => {
         console.log(productname.value);
         console.log(productprice.value);
         console.log(productcategory.value);
-        console.log(image.value);
+
+        formData.append('name',productname.value);
+        formData.append('price',productprice.value);
+        formData.append('category',productcategory.value);
+        formData.append('id', userInfo);
+        axios.post('http://localhost/ecommerce-server/admin-backend/add_product.php',formData)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
+        location.reload();
     }
-})
 
 edit_button.addEventListener('click',()=>{
-    console.log(1);
     if(editname.value == '' || editprice.value == ''){
         erroredit.innerText='Please enter all information';
     }
