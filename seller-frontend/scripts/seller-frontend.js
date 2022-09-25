@@ -2,7 +2,6 @@ localStorage.setItem('data', 1);
 
 var userInfo = localStorage.getItem('data');
 
-
 const addproduct=document.querySelector('#add-product');
 const editproduct=document.querySelector('#edit-product');
 const deleteproduct=document.querySelector('#delete-product');
@@ -75,27 +74,37 @@ closecategory.addEventListener('click',()=>{
     main.classList.remove('disabled');
 })
 
-for(var i=0;i<10;i++){
-    let template=`
-        <tr>
-            <td><img src=' ' class='image-product'></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>`;
-        table.innerHTML+=template;
-}
 
+    const getData = new FormData();
+    getData.append('id',userInfo);
+    axios.post('http://localhost/ecommerce-server/seller-backend/view_product.php',getData)
+    .then(res => getProduct(res.data))
+    .catch(err=>console.log(err));
 
-for(var i=0; i < table.rows.length; i++){
-    table.rows[i].onclick = function(){
-        product.value=this.cells[1].innerHTML;
-        editproduct.disabled=false;
-        editproduct.classList.remove('blocked');
-        deleteproduct.disabled=false;
-        deleteproduct.classList.remove('blocked');
+    getProduct=(data)=>{
+
+        for(var i=0;i<data.length;i++){
+            let template=`
+                <tr>
+                    <td><img src='${data[i].image}' class='image-product'></td>
+                    <td>${data[i].id}</td>
+                    <td>${data[i].name}</td>
+                    <td>${data[i].price}$</td>
+                </tr>`;
+                table.innerHTML+=template;
+        }
+        
+        
+        for(var i=0; i < table.rows.length; i++){
+            table.rows[i].onclick = function(){
+                product.value=this.cells[1].innerHTML;
+                editproduct.disabled=false;
+                editproduct.classList.remove('blocked');
+                deleteproduct.disabled=false;
+                deleteproduct.classList.remove('blocked');
+            }
+        }        
     }
-}
 
 
 const reader = new FileReader();
@@ -125,7 +134,7 @@ add.addEventListener("click", () => {
         formData.append('price',productprice.value);
         formData.append('category',productcategory.value);
         formData.append('id', userInfo);
-        axios.post('http://localhost/ecommerce-server/admin-backend/add_product.php',formData)
+        axios.post('http://localhost/ecommerce-server/seller-backend/add_product.php',formData)
         .then(res => console.log(res))
         .catch(err=>console.log(err));
         location.reload();
@@ -142,7 +151,7 @@ edit_button.addEventListener('click',()=>{
         editData.append('id',product.value);
         editData.append('name',editname.value);
         editData.append('price',editprice.value);
-        axios.post('http://localhost/ecommerce-server/admin-backend/edit_product.php',editData)
+        axios.post('http://localhost/ecommerce-server/seller-backend/edit_product.php',editData)
         .then(res => console.log(res))
         .catch(err=>console.log(err));
         location.reload();
@@ -153,7 +162,7 @@ edit_button.addEventListener('click',()=>{
 deleteproduct.addEventListener('click',()=>{
     const deleteData = new FormData();
         deleteData.append('user_id',product.value);
-        axios.post('http://localhost/ecommerce-server/admin-backend/delete_product.php',deleteData)
+        axios.post('http://localhost/ecommerce-server/seller-backend/delete_product.php',deleteData)
         .then(res => console.log(res))
         .catch(err=>console.log(err));
         location.reload();
