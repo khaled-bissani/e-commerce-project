@@ -33,6 +33,7 @@ go_seller.addEventListener('click',()=>{
 time_seller.addEventListener('change',()=>{
   var range_seller=time_seller.value;
   axios.get(`http://localhost/ecommerce-server/admin-backend/seller_${range_seller}.php`).then((response) => {
+  console.log('data123'+response.data);
   seller_histogram(response.data);
   })
 })
@@ -79,10 +80,10 @@ seller_histogram=(data)=>{
     .data(data.sort((a, b) => d3.descending(a.revenue,b.revenue)))
     .join("rect")
       .attr("x", (d, i) => x(i))
-      .attr("y", d => y(d.revenue/100))
+      .attr("y", d => y(d.revenue/1000))
       .attr('title', (d) => d.revenue)
       .attr("class", "rect")
-      .attr("height", d => y(0) - y(d.revenue/100))
+      .attr("height", d => y(0) - y(d.revenue/1000))
       .attr("width", x.bandwidth());
 
   //design y-axis    
