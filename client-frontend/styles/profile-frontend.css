@@ -15,6 +15,9 @@ a{
   cursor: pointer;
   color: #000;
 }
+img{
+  height: 100%;
+}
 .flex {
   display: flex;
 }
@@ -29,6 +32,101 @@ a{
 }
 .dir-column {
   flex-direction: column;
+}
+/* Popup */
+.popup{
+  background-color: #ffffff;
+  width: 700px;
+  height: 350px;
+  padding: 30px 40px;
+  position: fixed;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 10%;
+  border-radius: 8px;
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 200px;
+  overflow-y: auto;
+}
+.popup > button:first-child{
+  display: block;
+  margin:  0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #ffffff;
+  background: var(--primary-color);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.editpopup i{
+  cursor: pointer;
+}
+.edit-profile{
+  font-size: 20px;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 50px;
+  padding: 10px 15px;
+  margin: 20px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.edit-container label{
+  font-size: 25px;
+}
+.edit-container input{
+  font-size: 20px;
+}
+.profile-name{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-name > input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+.profile-username{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-username > input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+.profile-email{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-email > input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+.profile-number{
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-number > input{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
 }
 /* Nav bar */
 nav{
@@ -126,17 +224,16 @@ ul a:hover{
 }
 .profile-pic {
   width:20%;
-  height:40vh;
   align-items: center;
+  border-radius: 50%;
 }
-.profile-pic img {
-  border-radius: 100%;
-  margin: 15px;
+.profile-pic > img {
+  border-radius: 50%;
+  margin: 15px 15px 15px 70px;
   width: 100%;
-  height: 85%;
 }
 .info-tab {
-  margin-left: 20px;
+  margin-left: 150px;
   width: 68%;
   height:40vh;
   align-items: center;
@@ -152,12 +249,31 @@ ul a:hover{
   align-items: center;
   justify-content: center;
 }
+.info1{
+  display: flex;
+  justify-content: start;
+  margin-top: -100px;
+  margin-left: 515px;
+}
+.info-item2 {
+  width: 30%;
+  height: 60px;
+  margin: 15px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #2565AE;
+  align-items: center;
+  justify-content: center;
+}
+.info1 > .info-item2:last-child{
+  margin-left: 195px;
+}
 .fir-clm-info{
   width: 30% ;
   height: 100%;
   display: flex;
 }
-.fir-clm-info button:hover{
+.info-item2:hover{
   background-color: #2565AE;
   color: #fff;
   cursor: pointer;
