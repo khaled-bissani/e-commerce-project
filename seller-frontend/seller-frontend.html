@@ -5,7 +5,7 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <title>Admin</title>
+        <title>Seller</title>
     </head>
     <body>
         <div class="main" id="main">
@@ -23,7 +23,7 @@
             </div>
 
 
-            <div class="seller-main home" id="home">
+            <div class="product-main home" id="home">
                 <div class="start-title">
                     <h1 class="home-title">Home</h1>
                 </div>
@@ -47,8 +47,8 @@
 
             <div class="product-add" id="add-form">
                 <button class="close-addproduct" id="close-add"><i class="fa-solid fa-xmark"></i></button>
-                <p class="error" id="error"></p>
-                <div class="input-form">
+                <p class="error" id="error-add"></p>
+                <div class="input-form-product">
                     <h1 class="product-title">Add product</h1>
                     <input type="text" placeholder="Product Name" class="product-input" id="product-name">
                     <input type="text" placeholder="Product Price" class="product-input"  id="product-price">
@@ -60,8 +60,8 @@
 
             <div class="product-add" id="edit-form">
                 <button class="close-addproduct" id="close-edit"><i class="fa-solid fa-xmark"></i></button>
-                <p class="error" id="error"></p>
-                <div class="input-form">
+                <p class="error" id="error-edit"></p>
+                <div class="input-form-product">
                     <h1 class="product-title" id="editid">Edit product</h1>
                     <input type="text" placeholder="Product Name" class="product-input" id="editname">
                     <input type="text" placeholder="Product Price" class="product-input" id="editprice">
@@ -71,7 +71,6 @@
 
             <div class="product-add" id="category-form">
                 <button class="close-addproduct" id="close-category"><i class="fa-solid fa-xmark"></i></button>
-                <p class="error" id="error"></p>
                 <div class="type-form">
                     <h1 class="product-title">Gategory</h1>
                 </div>     
