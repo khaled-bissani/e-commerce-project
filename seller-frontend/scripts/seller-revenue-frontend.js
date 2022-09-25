@@ -29,6 +29,11 @@ axios.post('http://localhost/ecommerce-server/seller-backend/revenue_month.php',
 month.innerHTML=`${res.data.revenue}$`)
 .catch(err=>console.log(err));
 
+//getting year revenue
+axios.post('http://localhost/ecommerce-server/seller-backend/revenue_year.php',revenueData)
+.then(res => 
+year.innerHTML=`${res.data.revenue}$`)
+.catch(err=>console.log(err));
 
 
 for(let i=0;i<5;i++){
