@@ -123,13 +123,12 @@ function checkLogin(){
 
         let enter=false
         let ban=false
-        let currentUserId=0
         
         axios.post('http://localhost/ecommerce-server/login.php')
                 .then(res => {
                     for(let i=0; i<res.data.length; i++){
                         if(res.data[i].username == usernameLogin && res.data[i].password==passwordLogin){
-                            currentUserId = res.data[i].id
+                            localStorage.setItem('currentUserId' , res.data[i].id)
                             if (res.data[i].is_banned==0){
                                 enter=true
                             }
