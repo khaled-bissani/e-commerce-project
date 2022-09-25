@@ -1,5 +1,5 @@
 //get id from localstorage
-const userID = localStorage.getItem('data');
+const userID = localStorage.getItem('seller_id');
 
 //connect HTML tag
 const total_revenue=document.querySelector('#total-revenue');
@@ -38,15 +38,14 @@ year.innerHTML=`${res.data.revenue}$`)
 //getting every product revenue
 axios.post('http://localhost/ecommerce-server/seller-backend/revenue_product.php',revenueData)
 .then(res => {
-    console.log(res.data[402]);
     for(let i=0;i<res.data.length;i++){
             const template=`<div class="product-item">
             <h1 class="range-title">${res.data[i].name}</h1>
             <p class="title-product">${res.data[i].count}</p>
-            <p class="title-product">${res.data[i].sum}</p>
+            <p class="title-product">${res.data[i].revenue}$</p>
             </div>`
             
-            //revenue_product.innerHTML+=template;
+            revenue_product.innerHTML+=template;
         }
     })
 .catch(err=>console.log(err));

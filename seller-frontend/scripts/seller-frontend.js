@@ -1,6 +1,4 @@
-localStorage.setItem('data', 22);
-
-const userInfo = localStorage.getItem('data');
+const userInfo = localStorage.getItem('seller_id');
 
 const home=document.querySelector('#to-home');
 const revenue=document.querySelector('#to-revenue');
@@ -42,6 +40,8 @@ const showcategory=document.querySelector('#show-category');
 
 const home_form=document.querySelector('#home');
 const revenue_form=document.querySelector('#revenue');
+
+const logoutseller=document.querySelector('#logout-seller');
 
 home.addEventListener('click',()=>{
     home_form.style.display='block';
@@ -192,4 +192,9 @@ axios.get('http://localhost/ecommerce-server/seller-backend/view_category.php').
   }
   }).catch((error)=> {
       console.log('rejected',error);
+  })
+
+  logoutseller.addEventListener('click',()=>{
+    window.localStorage.clear();
+    window.location.replace('../client-frontend/landing-frontend.html');
   })

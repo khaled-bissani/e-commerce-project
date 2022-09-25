@@ -47,11 +47,11 @@
 }
 
 .home{
-    display: none;
+    display: block;
 }
 
 .revenue{
-    display: block;
+    display: none;
 }
 
 .start-title{
@@ -280,6 +280,10 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.logout-seller{
+    margin-top: 100px;
+}
+
 @media (max-width: 850px){
     .bar-link{
         display: none;
@@ -298,6 +302,13 @@
         width: 50%;
     }
 }
+
+@media (max-width: 950px){
+    .double{
+        display: none;
+    }
+}
+
 
 
 
