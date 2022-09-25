@@ -4,7 +4,7 @@ const refreshBtn = document.querySelector('.refresh');
 const sendTo = document.getElementById('send-to');
 const messageId = document.querySelector('.message-id');
 
-const sendMessage = document.querySelector('.send-message');
+const sendMessage = document.querySelector('.send-msg');
 const receiveMessage = document.querySelector('.receive-message');
 
 const sendBtn = document.querySelector('.send-btn');
@@ -41,7 +41,13 @@ refreshBtn.onclick = function(){
 }
 
 function sendToSeller(){
-    console.log('send')
+    const sender1 = new FormData();
+    sender1.append('message',sendMessage.value);
+    sender1.append('sender',localStorage.getItem('currentUserId'));
+    sender1.append('receiver',localStorage.getItem('seller_id'));
+    axios.post('http://localhost/ecommerce-server/send_chat.php',sender1)
+        .then(res => console.log(res))
+        .catch(err =>console.log(err));
 }
 
 function receiveFromSeller(){
