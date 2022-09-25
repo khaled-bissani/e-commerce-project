@@ -19,5 +19,14 @@ window.onload = function() {
                                 <i class="fa fa-list-alt"></i>
                             </div>`
                     }
-                })
+
+                    const favoriteBtn = document.querySelectorAll('favorite-btn');
+                    console.log(favoriteBtn)
+                    
+                    function favoriteProduct() {
+                            console.log(res.data[1].id)
+                        }
+                    
+                    
+    })
 }
