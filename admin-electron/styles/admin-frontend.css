@@ -49,7 +49,7 @@
 }
 
 .dashboard{
-    display: none;
+    display: block;
 }
 
 .clients{
@@ -57,7 +57,7 @@
 }
 
 .sellers{
-    display: block;
+    display: none;
 }
 
 .title{

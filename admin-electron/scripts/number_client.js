@@ -6,5 +6,5 @@ axios.get('http://localhost/ecommerce-server/admin-backend/number_client.php').t
   console.log('api',response.data.number_of_client);
   number_client.innerHTML=response.data.number_of_client;
   }).catch((error)=> {
-      console.log('rejected',err);
+      console.log('rejected',error);
   })

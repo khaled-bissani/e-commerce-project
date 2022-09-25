@@ -6,5 +6,5 @@ axios.get('http://localhost/ecommerce-server/admin-backend/number_product.php').
   console.log('api',response.data.number_of_product);
   number_product.innerHTML=response.data.number_of_product;
   }).catch((error)=> {
-      console.log('rejected',err);
+      console.log('rejected',error);
   })

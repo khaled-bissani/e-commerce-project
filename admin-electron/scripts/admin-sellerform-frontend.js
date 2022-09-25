@@ -129,6 +129,6 @@ delete_button.addEventListener('click',()=>{
         axios.post('http://localhost/ecommerce-server/admin-backend/delete_seller.php',formDelete)
         .then(res => console.log(res))
         .catch(err=>console.log(err));
-        //location.reload();
+        location.reload();
     })
 
