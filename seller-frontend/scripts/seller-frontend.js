@@ -2,6 +2,7 @@ const userInfo = localStorage.getItem('seller_id');
 
 const home=document.querySelector('#to-home');
 const revenue=document.querySelector('#to-revenue');
+const chat1=document.querySelector('#to-chat');
 
 const addproduct=document.querySelector('#add-product');
 const editproduct=document.querySelector('#edit-product');
@@ -40,17 +41,26 @@ const showcategory=document.querySelector('#show-category');
 
 const home_form=document.querySelector('#home');
 const revenue_form=document.querySelector('#revenue');
+const chat_form1=document.querySelector('#chat1');
 
 const logoutseller=document.querySelector('#logout-seller');
 
 home.addEventListener('click',()=>{
     home_form.style.display='block';
     revenue_form.style.display='none';
+    chat_form1.style.display='none';
 })
 
 revenue.addEventListener('click',()=>{
     revenue_form.style.display='block';
     home_form.style.display='none';
+    chat_form1.style.display='none';
+})
+
+chat1.addEventListener('click',()=>{
+    chat_form1.style.display='block';
+    home_form.style.display='none';
+    revenue_form.style.display='none';
 })
 
 addproduct.addEventListener('click',()=>{

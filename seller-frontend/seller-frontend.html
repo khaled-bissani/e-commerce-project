@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <title>Seller</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
         <div class="main" id="main">
@@ -21,6 +21,10 @@
                     <a id="to-revenue">
                         <i class="fa-solid fa-wallet"></i>
                         <span class="bar-link">Revenue</span>
+                    </a>
+                    <a id="to-chat">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="bar-link">Chat</span>
                     </a>
                     <a id="logout-seller" class="logout-seller">
                         <i class="fa-solid fa-right-from-bracket"></i>
@@ -74,6 +78,34 @@
             </div>
         </div>
 
+        <div class="product-main chat1" id="chat1">
+            <div class="start-title">
+                <h1 class="home-title">Chat</h1>
+            </div>
+            <div class="chat-container1">
+                <div class="to-message1">
+                    <label>To:</label>
+                    <textarea id="send-to1"></textarea>
+                </div>
+                <div class="message-id1">
+                    <label>ID</label>
+                    <textarea></textarea>
+                </div>
+                <div class="send-message1">
+                    <label>Send message</label>
+                    <textarea class="send-msg1"></textarea>
+                </div>
+                <div class="receive-message1">
+                    <label>Receive message</label>
+                    <textarea></textarea>
+                </div>
+                <div class="buttons1">
+                    <button class="send-btn1">Send</button>
+                    <button class="receive-btn1">Receive</button>
+                    <button class="refresh-btn1">Refresh</button>
+                </div>
+            </div>
+        </div>
 
             <div class="product-add" id="add-form">
                 <button class="close-addproduct" id="close-add"><i class="fa-solid fa-xmark"></i></button>
@@ -110,5 +142,6 @@
             </div>
         <script src="scripts/seller-frontend.js"></script>
         <script src="scripts/seller-revenue-frontend.js"></script>
+        <script src="scripts/seller_chat.js"></script>
     </body>
 </html>
