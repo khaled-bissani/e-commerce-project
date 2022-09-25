@@ -4,6 +4,7 @@ window.onload = function() {
     axios.post('http://localhost/ecommerce-server/retreive_product.php')
                 .then(res => {
                     for(let i=0; i<res.data.length; i++){
+                        localStorage.setItem('currentProductId' , res.data[i].id)
                         itemContainer.innerHTML+= `
                         <div id="item" class="items">
                             <div class="item-image">
@@ -20,12 +21,12 @@ window.onload = function() {
                             </div>`
                     }
 
-                    const favoriteBtn = document.querySelectorAll('favorite-btn');
-                    console.log(favoriteBtn)
+                    // const favoriteBtn = document.querySelectorAll('favorite-btn');
+                    // console.log(favoriteBtn)
                     
-                    function favoriteProduct() {
-                            console.log(res.data[1].id)
-                        }
+                    // function favoriteProduct() {
+                    //         console.log(res.data[1].id)
+                    //     }
                     
                     
     })

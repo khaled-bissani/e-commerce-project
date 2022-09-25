@@ -76,6 +76,10 @@
                 </div>
             </div>
         </div>
+        <!-- Search popup -->
+        <div id="search-popup" class="searchpopup">
+            <button id="close-search">&times;</button>
+        </div>
         <!-- End popup section -->
         <!-- Start Nav bar section -->
         <nav>
@@ -87,7 +91,8 @@
                 <li><a href="profile-frontend.html">Profile</a></li>
                 <li>
                     <div class="search-button">
-                        <i class="fa fa-search"></i>
+                        <i id="search-btn" class="fa fa-search"></i>
+                        <i id="open-search" class="fa fa-arrow-down"></i>
                         <input type="text" placeholder="Search" id="home-search-btn" ></input>
                     </div>
                 </li>
@@ -113,6 +118,7 @@
         <!-- End item section -->
         <script src="scripts/home-frontend.js"></script>
         <script src="scripts/retreive-product.js"></script>
+        <script src="scripts/search.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </body>
 </html>
