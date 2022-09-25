@@ -1,4 +1,4 @@
-localStorage.setItem('data', 1);
+localStorage.setItem('data', 22);
 
 var userInfo = localStorage.getItem('data');
 
