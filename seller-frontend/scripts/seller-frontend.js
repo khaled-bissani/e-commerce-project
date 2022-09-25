@@ -28,7 +28,8 @@ const editprice=document.querySelector('#editprice');
 const add=document.querySelector('#add');
 const edit_button=document.querySelector('#edit');
 
-const error=document.querySelector('#error');
+const erroradd=document.querySelector('#error-add');
+const erroredit=document.querySelector('#error-edit');
 
 addproduct.addEventListener('click',()=>{
     addform.style.display='block';
@@ -88,3 +89,25 @@ for(var i=0; i < table.rows.length; i++){
     }
 }
 
+add.addEventListener('click',()=>{
+    if(productname.value == '' || productprice == '' || productcategory == '' || image.value == ''){
+        erroradd.innerText='Please enter all information';
+    }
+    else{
+        console.log(productname.value);
+        console.log(productprice.value);
+        console.log(productcategory.value);
+        console.log(image.value);
+    }
+})
+
+edit_button.addEventListener('click',()=>{
+    console.log(1);
+    if(editname.value == '' || editprice.value == ''){
+        erroredit.innerText='Please enter all information';
+    }
+    else{
+        console.log(editname.value);
+        console.log(editprice.value);
+    }
+})
