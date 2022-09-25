@@ -35,13 +35,18 @@ axios.post('http://localhost/ecommerce-server/seller-backend/revenue_year.php',r
 year.innerHTML=`${res.data.revenue}$`)
 .catch(err=>console.log(err));
 
-
-for(let i=0;i<5;i++){
-    const template=`<div class="product-item">
-    <h1 class="range-title"></h1>
-    <p class="title-product"></p>
-    <p class="title-product"></p>
-    </div>`;
-
-    revenue_product.innerHTML+=template;
-}
+//getting every product revenue
+axios.post('http://localhost/ecommerce-server/seller-backend/revenue_product.php',revenueData)
+.then(res => {
+    console.log(res.data[402]);
+    for(let i=0;i<res.data.length;i++){
+            const template=`<div class="product-item">
+            <h1 class="range-title">${res.data[i].name}</h1>
+            <p class="title-product">${res.data[i].count}</p>
+            <p class="title-product">${res.data[i].sum}</p>
+            </div>`
+            
+            //revenue_product.innerHTML+=template;
+        }
+    })
+.catch(err=>console.log(err));
