@@ -1,18 +1,23 @@
 <?php
 
+header("Access-Control-Allow-Origin:*");
+header("Access-Control-Allow-Headers:*");
+
 include("connection.php");
+$done = false;
 
-$query = $mysqli->prepare("SELECT * FROM products");
-$query->execute();
-$array = $query->get_result();
+$id=$_POST['id'];
 
-$response = [];
+$query = $mysqli->prepare("SELECT * FROM products where seller_id=?");
+$query->bind_param("i", $id);
 
-while($a = $array->fetch_assoc()){
-    $response[] = $a;
+if ($query->execute()){
+    $array = $query->get_result();
+
+    $response=[];
+    while($row=$array->fetch_array()){
+        $response[]=$row;
+    }  
+      echo json_encode($response);
 }
 
-$json = json_encode($response);
-echo $json;
-
-?>
