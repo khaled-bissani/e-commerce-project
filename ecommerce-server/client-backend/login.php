@@ -6,7 +6,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 include("connection.php");
 
-$query = $mysqli->prepare("SELECT username, password FROM users WHERE types_id=3");
+$query = $mysqli->prepare("SELECT id, username, password, is_banned FROM users WHERE types_id=3");
 $query->execute();
 $array = $query->get_result();
 $response = [];
