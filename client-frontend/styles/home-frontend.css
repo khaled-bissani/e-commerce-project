@@ -353,7 +353,7 @@ ul a:hover{
 .chatpopup{
     background-color: #ffffff;
     width: 700px;
-    height: 300px;
+    height: 500px;
     padding: 10px 20px;
     transform: translate(-50%,-50%);
     border-radius: 8px;
@@ -383,7 +383,18 @@ ul a:hover{
 .chatpopup i{
     cursor: pointer;
 }
-.send{
+.send-btn{
+    font-size: 20px;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 50px;
+    padding: 10px 15px;
+    margin: 20px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.receive-btn{
     font-size: 20px;
     color: #fff;
     background: var(--primary-color);
@@ -415,6 +426,30 @@ ul a:hover{
 .chat-card > button:hover{
     color: #fff;
     background: var(--primary-color);
+}
+.seller-container label{
+    font-size: 25px;
+}
+.seller-container textarea{
+    font-size: 20px;
+}
+.to-message{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.to-message > textarea{
+    width: 100%;
+}
+.message-id{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.message-id > textarea{
+    width: 100%;
 }
 .send-message{
     margin-top: 20px;
