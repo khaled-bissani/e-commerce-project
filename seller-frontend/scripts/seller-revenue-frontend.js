@@ -17,6 +17,13 @@ axios.post('http://localhost/ecommerce-server/seller-backend/revenue.php',revenu
 total_revenue.innerHTML=`Total Revenue ${res.data.revenue}$`)
 .catch(err=>console.log(err));
 
+//getting week revenue
+axios.post('http://localhost/ecommerce-server/seller-backend/revenue_week.php',revenueData)
+.then(res => 
+week.innerHTML=`${res.data.revenue}$`)
+.catch(err=>console.log(err));
+
+
 
 for(let i=0;i<5;i++){
     const template=`<div class="product-item">
