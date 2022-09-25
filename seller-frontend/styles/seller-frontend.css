@@ -47,11 +47,11 @@
 }
 
 .home{
-    display: block;
+    display: none;
 }
 
 .revenue{
-    display: none;
+    display: block;
 }
 
 .start-title{
@@ -198,9 +198,104 @@
     padding: 10px 0;
 }
 
-@media (max-width: 800px){
+/*revenue form*/
+.total-revenue{
+    margin: 20px 58px;
+    color: #2565AE;
+}
+
+.revenue-range{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid grey;
+}
+
+.range-item{
+    width: 25%;
+    height: 150px;
+    margin: 30px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2565AE;
+    color: white;
+    font-size: 25px;
+}
+
+.range-item:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.corn{
+    background-color: cornflowerblue;
+}
+
+.deep{
+    background-color: deepskyblue;
+}
+
+.range-title{
+    padding: 20px 0;
+    font-size: 35px;
+    color: white;
+}
+
+.value-title{
+    margin: 8px 0 30px 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.revenue-product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product-item{
+    width: 25%;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightsteelblue;
+    color: white;
+    font-size: 25px;
+}
+
+.title-product{
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media (max-width: 850px){
     .bar-link{
         display: none;
+    }
+
+    .revenue-range{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .range-item{
+        width: 50%;
+    }
+
+    .product-item{
+        width: 50%;
     }
 }
 
