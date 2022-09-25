@@ -23,6 +23,12 @@ axios.post('http://localhost/ecommerce-server/seller-backend/revenue_week.php',r
 week.innerHTML=`${res.data.revenue}$`)
 .catch(err=>console.log(err));
 
+//getting month revenue
+axios.post('http://localhost/ecommerce-server/seller-backend/revenue_month.php',revenueData)
+.then(res => 
+month.innerHTML=`${res.data.revenue}$`)
+.catch(err=>console.log(err));
+
 
 
 for(let i=0;i<5;i++){
