@@ -16,8 +16,6 @@ const seller_name=document.querySelector('#sellername');
 const seller_username=document.querySelector('#sellerusername');
 const seller_email=document.querySelector('#selleremail');
 
-console.log('nnn'+seller_email.value);
-
 const edit_name=document.querySelector('#editname');
 const edit_email=document.querySelector('#editemail');
 
@@ -56,46 +54,81 @@ close_edit.addEventListener('click',()=>{
 //connect the table
 const table_seller=document.querySelector('#table-seller');
 
-//create a new row
-for(let i=0;i<15;i++){ 
-    let tempalte=`
+axios.get('http://localhost/ecommerce-server/admin-backend/get_seller.php').then((response) => {
+    add_table(response.data);
+    console.log(response.data);
+}).catch((error)=> {
+    console.log('rejected',error);
+});
+
+  
+  add_table=(data)=>{
+    for(var n=0;n<data.length;n++){
+        let tempalte=`
     <tr>
-        <td><img class='table-image' src=''></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td><img class='table-image' src='${data[n].profile_picture}'></td>
+        <td>${data[n].id}</td>
+        <td>${data[n].name}</td>
+        <td>${data[n].email}</td>
+        <td>${data[n].phone_number}</td>
     </tr>`;
-
     table_seller.innerHTML+=tempalte;
+
+    for(var i=0; i < table_seller.rows.length; i++){
+            table_seller.rows[i].onclick = function(){
+            seller_id.value=this.cells[1].innerHTML;
+            open_edit.disabled=false;
+            open_edit.classList.remove('blur');
+            delete_button.disabled=false;
+            delete_button.classList.remove('blur');
+        }
+      }
+    }    
 }
 
-//get the ID of each client by clicking on the row
-for(var i=1; i < table_seller.rows.length; i++){
-    table_seller.rows[i].onclick = function(){
-        seller_id.value=this.cells[1].innerHTML;
-        open_edit.disabled=false;
-        open_edit.classList.remove('blur');
-        delete_button.disabled=false;
-        delete_button.classList.remove('blur');
-    }
-}
-
+//add new seller
 add.addEventListener('click',()=>{
     if(seller_name.value == '' || seller_username.value == '' || seller_email.value == ''){
         error_add.innerText='Please enter correct information!';
     }
     else{
+        const formData = new FormData();
+        formData.append('name',seller_name.value);
+        formData.append('user_name',seller_username.value);
+        formData.append('email',seller_email.value);
+        axios.post('http://localhost/ecommerce-server/admin-backend/add_seller.php',formData)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
         location.reload();
     }
-
 })
 
+//edit seller information
 edit.addEventListener('click',()=>{
     if(edit_name.value == '' || edit_email.value == ''){
         error_edit.innerText='Please enter correct information!';
     }
     else{
+        const formEdit = new FormData();
+        formEdit.append('id',seller_id.value);
+        formEdit.append('name',edit_name.value);
+        formEdit.append('email',edit_email.value);
+        console.log(formEdit.get('id'));
+        axios.post('http://localhost/ecommerce-server/admin-backend/edit_seller.php',formEdit)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
         location.reload();
     }
 })
+
+
+delete_button.addEventListener('click',()=>{
+        const formDelete = new FormData();
+        formDelete.append('user_id',seller_id.value);
+        console.log(formDelete.get('user_id'));
+        axios.post('http://localhost/ecommerce-server/admin-backend/delete_seller.php',formDelete)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
+        //location.reload();
+    })
+
