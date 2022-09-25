@@ -6,9 +6,9 @@ header("Access-Control-Allow-Headers:*");
 include("connection.php");
 
 
-$query = $mysqli->prepare("select users.name, sum(sellers.revenue) as revenue from users, sellers 
-where users.types_id='2' and users.id = sellers.users_id and sellers.date> DATE_ADD(NOW(),INTERVAL - 365 DAY) 
-GROUP BY users.name order by sum(sellers.revenue) DESC LIMIT 5;");
+$query = $mysqli->prepare("select users.name, sum(sellers.revenue) as revenue 
+from users,sellers,products 
+where sellers.products_id=products.id and products.seller_id=users.id and sellers.date>DATE_ADD(NOW(),INTERVAL - 365 DAY) Group By users.name ORDER BY sum(sellers.revenue) DESC LIMIT 5;");
 
 if ($query->execute()){
     $array = $query->get_result();
