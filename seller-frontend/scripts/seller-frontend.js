@@ -146,3 +146,13 @@ edit_button.addEventListener('click',()=>{
         location.reload();
     }
 })
+
+//delete product
+deleteproduct.addEventListener('click',()=>{
+    const deleteData = new FormData();
+        deleteData.append('user_id',product.value);
+        axios.post('http://localhost/ecommerce-server/admin-backend/delete_product.php',deleteData)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
+        location.reload();
+})
