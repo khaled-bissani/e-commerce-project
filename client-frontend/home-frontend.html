@@ -81,7 +81,7 @@
         <nav>
             <label for="check" class="checkbtn">Menu</label>
             <input type="checkbox" id="check" value="Menu"/>
-            <label class="ecommerce-name" >E-commerce</label>
+            <label class="ecommerce-name"><i class="fa fa-angle-right"></i><i class="fa fa-grip-lines-vertical"></i><i class="fa fa-angle-left"></i>Double-K</label>
             <ul>
                 <li><a class="active" href="home-frontend.html">Home</a></li>
                 <li><a href="profile-frontend.html">Profile</a></li>
@@ -102,44 +102,18 @@
             <p>Cart</p>
             <i class="fa fa-list-alt"></i>
             <p>Wishlist</p>
+            <i id="logout" class="fa fa-right-from-bracket"></i>
+            <p>Logout</p>
         </div>
         <!-- End header section -->
         <!-- Start item section -->
         <div class="container">
-            <div class="item-section">
-                <div id="item" class="items">
-                    <div class="item-image">
-                        <img src="assets/rename.jpg" />
-                    </div>
-                    <div class="item-information">
-                        <p>Name of object</p>
-                        <p>32$</p>
-                    </div>
-                    <div class="item-option">
-                        <i class="fa fa-cart-plus"></i>
-                        <i class="favorite-btn fa fa-star"></i>
-                        <i class="fa fa-list-alt"></i>
-                    </div>
-                </div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
-                <div class="items"></div>
+            <div id="item-container" class="item-section">                
             </div>
         </div>
         <!-- End item section -->
         <script src="scripts/home-frontend.js"></script>
+        <script src="scripts/retreive_product.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </body>
 </html>

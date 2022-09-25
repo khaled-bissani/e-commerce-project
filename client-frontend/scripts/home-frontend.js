@@ -35,3 +35,10 @@ cartBtn.onclick = function() {
 closeCart.onclick = function() {
     cartPopup.style.display = "none";
 }
+
+// Logout
+const logout = document.getElementById('logout');
+
+logout.onclick = function() {
+  window.location.replace('landing-frontend.html');
+}

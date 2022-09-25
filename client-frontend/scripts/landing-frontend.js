@@ -114,12 +114,32 @@ function checkLogin(){
         login_password.placeholder = "enter your password";
     }
     else if (login_username.value != '' && login_password.value != ''){
+
         localStorage.setItem("login-username",login_username.value);
         localStorage.setItem("login-password",login_password.value);
 
-        login_username.value = '';
-        login_password.value = '';
-        console.log("success login");
+        const usernameLogin =localStorage.getItem("login-username");
+        const passwordLogin =localStorage.getItem("login-password");
+
+        let enter=false
+        
+        axios.post('http://localhost/ecommerce-server/login.php')
+                .then(res => {
+                    for(let i=0; i<res.data.length; i++){
+                        console.log(res.data[i].username)
+                        if(res.data[i].username == usernameLogin && res.data[i].password==passwordLogin){
+                            enter=true   
+                        }}
+                    if(enter){
+                        window.location.replace('home-frontend.html');
+                    }
+                    else{
+                        document.getElementById('wrong-info').style.color = "red";
+                        document.getElementById('wrong-info').innerText = "Wrong username or password!";
+                    }
+                } 
+                    )
+                .catch(err => console.log(err))
     }
     
 }
