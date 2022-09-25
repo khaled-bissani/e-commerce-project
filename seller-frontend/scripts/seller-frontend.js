@@ -50,6 +50,7 @@ closeadd.addEventListener('click',()=>{
 
 editproduct.addEventListener('click',()=>{
     editform.style.display='block';
+    edit.innerText=`Edit product ${product.value}`;
     main.classList.add('blocked');
     main.classList.add('disabled');
 })
@@ -129,11 +130,19 @@ add.addEventListener("click", () => {
     }
 
 edit_button.addEventListener('click',()=>{
+    //check if data is empty
     if(editname.value == '' || editprice.value == ''){
         erroredit.innerText='Please enter all information';
     }
     else{
-        console.log(editname.value);
-        console.log(editprice.value);
+        //edit product
+        const editData = new FormData();
+        editData.append('id',product.value);
+        editData.append('name',editname.value);
+        editData.append('price',editprice.value);
+        axios.post('http://localhost/ecommerce-server/admin-backend/edit_product.php',editData)
+        .then(res => console.log(res))
+        .catch(err=>console.log(err));
+        location.reload();
     }
 })
