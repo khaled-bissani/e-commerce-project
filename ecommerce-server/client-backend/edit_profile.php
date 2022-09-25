@@ -12,8 +12,8 @@ $username = $_POST["username"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
 
-$query = $mysqli->prepare("UPDATE users SET name=?, username=?, email=?, phone_number= ? WHERE username= ?");
-$query->bind_param("sssss", $fname, $username, $email, $phone, $currentuser);
+$query = $mysqli->prepare("UPDATE users SET name=?, username=?, email=?, phone_number= ? WHERE id= ?");
+$query->bind_param("ssssi", $fname, $username, $email, $phone, $currentuser);
 $query->execute();
 $response = [];
 $response["success"] = true;

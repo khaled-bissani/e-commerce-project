@@ -6,7 +6,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 
 include("connection.php");
 $id=$_POST['id'];
-$query = $mysqli->prepare("SELECT name, username, email, phone_number FROM users WHERE types_id=3 AND id=".$id." ");
+$query = $mysqli->prepare("SELECT name, username, email, phone_number, profile_picture FROM users WHERE types_id=3 AND id=".$id." ");
 $query->execute();
 $array = $query->get_result();
 $response = [];
