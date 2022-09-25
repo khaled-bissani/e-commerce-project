@@ -1,54 +1,90 @@
-// toggle through pages
-const sec_home = document.getElementById("home-section");
-const sec_category = document.getElementById("category-section");
-const sec_revenue = document.getElementById("revenue-section");
-const sec_discount = document.getElementById("discount-section");
+const addproduct=document.querySelector('#add-product');
+const editproduct=document.querySelector('#edit-product');
+const deleteproduct=document.querySelector('#delete-product');
+const categoryproduct=document.querySelector('#category-product');
 
-const btn_home = document.getElementById("home");
-const btn_category = document.getElementById("category");
-const btn_revenue = document.getElementById("revenue");
-const btn_discount = document.getElementById("discount");
+const addform=document.querySelector('#add-form');
+const editform=document.querySelector('#edit-form');
+const categoryform=document.querySelector('#category-form');
 
-// view home-section
-btn_home.addEventListener('click',()=>{
-    sec_home.style.display='block';
-    sec_category.style.display='none';
-    sec_revenue.style.display='none';   
-    sec_discount.style.display='none';  
+const closeadd=document.querySelector('#close-add');
+const closeedit=document.querySelector('#close-edit');
+const closecategory=document.querySelector('#close-category');
+
+const main=document.querySelector('#main');
+const table=document.querySelector('#table');
+
+const product=document.querySelector('#product-id');
+const edit=document.querySelector('#editid');
+
+const productname=document.querySelector('#product-name');
+const productprice=document.querySelector('#product-price');
+const productcategory=document.querySelector('#product-category');
+const image=document.querySelector('#image');
+
+const editname=document.querySelector('#editname');
+const editprice=document.querySelector('#editprice');
+
+const add=document.querySelector('#add');
+const edit_button=document.querySelector('#edit');
+
+const error=document.querySelector('#error');
+
+addproduct.addEventListener('click',()=>{
+    addform.style.display='block';
+    main.classList.add('blocked');
+    main.classList.add('disabled');
 })
 
-// view category-section
-btn_category.addEventListener('click',()=>{
-    sec_home.style.display='none';
-    sec_category.style.display='block';
-    sec_revenue.style.display='none'; 
-    sec_discount.style.display='none';     
+closeadd.addEventListener('click',()=>{
+    addform.style.display='none';
+    main.classList.remove('blocked');
+    main.classList.remove('disabled');
 })
 
-// view revenue-section
-btn_revenue.addEventListener('click',()=>{
-    sec_home.style.display='none';
-    sec_category.style.display='none';
-    sec_revenue.style.display='block';   
-    sec_discount.style.display='none';   
+editproduct.addEventListener('click',()=>{
+    editform.style.display='block';
+    main.classList.add('blocked');
+    main.classList.add('disabled');
 })
 
-// view discount-section
-btn_discount.addEventListener('click',()=>{
-    sec_home.style.display='none';
-    sec_category.style.display='none';
-    sec_revenue.style.display='none';   
-    sec_discount.style.display='block';   
+closeedit.addEventListener('click',()=>{
+    editform.style.display='none';
+    main.classList.remove('blocked');
+    main.classList.remove('disabled');
 })
 
-////////////////////////////////////////////////////
-// pop up
-const btn_add = document.getElementById("btn-add");
-btn_add.addEventListener('click',()=>{
-    document.getElementById("myForm").style.display = "block";
-});
+categoryproduct.addEventListener('click',()=>{
+    categoryform.style.display='block';
+    main.classList.add('blocked');
+    main.classList.add('disabled');
+})
 
-const btn_close = document.getElementById("btn-close");
-btn_close.addEventListener('click',()=>{
-    document.getElementById("myForm").style.display = "none";
-});
+closecategory.addEventListener('click',()=>{
+    categoryform.style.display='none';
+    main.classList.remove('blocked');
+    main.classList.remove('disabled');
+})
+
+for(var i=0;i<10;i++){
+    let template=`
+        <tr>
+            <td><img src=' ' class='image-product'></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>`;
+        table.innerHTML+=template;
+}
+
+
+for(var i=0; i < table.rows.length; i++){
+    table.rows[i].onclick = function(){
+        product.value=this.cells[1].innerHTML;
+        editproduct.disabled=false;
+        editproduct.classList.remove('blocked');
+        deleteproduct.disabled=false;
+        deleteproduct.classList.remove('blocked');
+    }
+}
+
