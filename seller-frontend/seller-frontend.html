@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/seller-frontend.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Seller</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div class="main" id="main">
+            <div class="side-bar">
+                <div class="bar-item">
+                    <a>
+                        <label class="ecommerce-name"><i class="fa fa-angle-right"></i><i class="fa fa-grip-lines-vertical"></i><i class="fa fa-angle-left"></i><sapn class="double">Double-K</sapn></label>
+                    </a>
+                    <a id="to-home">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="bar-link">Home</span>
+                    </a>
+                    <a id="to-revenue">
+                        <i class="fa-solid fa-wallet"></i>
+                        <span class="bar-link">Revenue</span>
+                    </a>
+                    <a id="to-chat">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="bar-link">Chat</span>
+                    </a>
+                    <a id="logout-seller" class="logout-seller">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="bar-link">Logout</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="product-main home" id="home">
+                <div class="start-title">
+                    <h1 class="home-title">Home</h1>
+                </div>
+                <div class="section-product">
+                    <div class="product-id">
+                        <input type="text" class="input-id-product" placeholder="Product ID" id="product-id">
+                        <button class="button-product" id="add-product">Add</button>
+                        <button class="button-product blocked" id="edit-product" disabled>Edit</button>
+                        <button class="button-product blocked" id="delete-product" disabled>Delete</button>
+                        <button class="button-product" id="category-product">View</button>
+                    </div>   
+                    <div class="main-table">
+                        <table class="product-table" id="table">
+                            <tr><th>Product Image</th><th>Product ID</th><th>Product Name</th><th>Product Price</th></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+        <div class="product-main revenue" id="revenue">
+            <div class="start-title">
+                <h1 class="home-title">Revenue</h1>
+            </div>
+            <h1 class="total-revenue" id="total-revenue"></h1>
+            <div class="revenue-range" id="revenue-range">
+                <div class="range-item">
+                    <h1 class="range-title">Week</h1>
+                    <p class="value-title" id="value-week"></p>
+                </div>
+                <div class="range-item corn">
+                    <h1 class="range-title">Month</h1>
+                    <p class="value-title" id="value-month"></p>
+                </div>
+                <div class="range-item deep">
+                    <h1 class="range-title">Year</h1>
+                    <p class="value-title" id="value-year"></p>
+                </div>
+            </div>
+            <div class="revenue-product" id="revenue-product">
+            </div>
+        </div>
+
+        <div class="product-main chat1" id="chat1">
+            <div class="start-title">
+                <h1 class="home-title">Chat</h1>
+            </div>
+            <div class="chat-container1">
+                <div class="to-message1">
+                    <label>To:</label>
+                    <textarea id="send-to1"></textarea>
+                </div>
+                <div class="message-id1">
+                    <label>ID</label>
+                    <textarea></textarea>
+                </div>
+                <div class="send-message1">
+                    <label>Send message</label>
+                    <textarea class="send-msg1"></textarea>
+                </div>
+                <div class="receive-message1">
+                    <label>Receive message</label>
+                    <textarea></textarea>
+                </div>
+                <div class="buttons1">
+                    <button class="send-btn1">Send</button>
+                    <button class="receive-btn1">Receive</button>
+                    <button class="refresh-btn1">Refresh</button>
+                </div>
+            </div>
+        </div>
+
+            <div class="product-add" id="add-form">
+                <button class="close-addproduct" id="close-add"><i class="fa-solid fa-xmark"></i></button>
+                <p class="error" id="error-add"></p>
+                <div class="input-form-product">
+                    <h1 class="product-title">Add product</h1>
+                    <input type="text" placeholder="Product Name" class="product-input" id="product-name">
+                    <input type="text" placeholder="Product Price" class="product-input"  id="product-price">
+                    <input type="text" placeholder="Product category" class="product-input" id="product-category">
+                    <input type="file" class="product-input" id="image">
+                    <button class="product-button" id="add">Add Product</button>
+                </div>     
+            </div>
+
+            <div class="product-add" id="edit-form">
+                <button class="close-addproduct" id="close-edit"><i class="fa-solid fa-xmark"></i></button>
+                <p class="error" id="error-edit"></p>
+                <div class="input-form-product">
+                    <h1 class="product-title" id="editid"></h1>
+                    <input type="text" placeholder="Product Name" class="product-input" id="editname">
+                    <input type="text" placeholder="Product Price" class="product-input" id="editprice">
+                    <button class="product-button" id="edit">Edit Product</button>
+                </div>     
+            </div>
+
+            <div class="product-add" id="category-form">
+                <button class="close-addproduct" id="close-category"><i class="fa-solid fa-xmark"></i></button>
+                <div class="type-form">
+                    <h1 class="product-title">Gategory</h1>
+                    <div class="show-category" id="show-category">
+                        
+                    </div>
+                </div>     
+            </div>
+        <script src="scripts/seller-frontend.js"></script>
+        <script src="scripts/seller-revenue-frontend.js"></script>
+        <script src="scripts/seller_chat.js"></script>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="styles/home-frontend.css"/>
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!-- Start popup section -->
+        <!-- Voucher popup -->
+        <div id="voucher-popup" class="popup">
+            <button id="close-voucher">&times;</button>
+            <h1>Voucher</h1>
+            <div class="voucher-card">
+                <div class="voucher-details">
+                    <div>
+                        <label for="to-friend">To:</label>
+                        <input id="to-friend" type="text" placeholder="Friend email"/>
+                    </div>
+                    <div>
+                        <label for="from-client">From:</label>
+                        <input id="from-client" type="text" placeholder="Client email"/>
+                    </div>
+                    <div>
+                        <label for="amount">Amount:</label>
+                        <input id="amount" type="text" placeholder="$$$"/>
+                    </div>
+                </div>
+                <div class="voucher-information">
+                    <p>10$</p>
+                    <p>Addidas</p>
+                </div>
+                <div id="share-btn" class="share-voucher">
+                    <i class="fa fa-share"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Cart popup -->
+        <div id="cart-popup" class="popup">
+            <button id="close-cart">&times;</button>
+            <h1>Cart</h1>
+            <div class="cart-item">
+                <div class="cart-details">
+                    <div class="item-header">
+                        <h2>Product</h2>
+                        <h2>Quantity</h2>
+                        <h2>Price</h2>
+                    </div>
+                    <div class="item-shop">
+                        <div class="item-shop-image">
+                            <img src="assets/rename.jpg" />
+                            <p>Name of object</p>
+                        </div>
+                        <div class="item-quantity">
+                            <input type="number" value="1" min="0" />
+                        </div>
+                        <div class="item-price">
+                            <p>32$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-checkout">
+                    <div class="discount-option">
+                        <h2>Do you have a discount?</h2>
+                        <div class="insert-discount">
+                            <input type="text" placeholder="Discount code" />
+                            <button id="apply-discount">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search popup -->
+        <div id="search-popup" class="searchpopup">
+            <button id="close-search">&times;</button>
+        </div>
+        <!-- Chat popup -->
+        <div id="chat-popup" class="seller-container chatpopup">
+            <button id="close-chat">&times;</button>
+            <h1>Chat</h1><i class="refresh fa fa-refresh"></i>
+            <div class="to-message">
+                <label>To:</label>
+                <textarea id="send-to"></textarea>
+            </div>
+            <div class="message-id">
+                <label>ID</label>
+                <textarea></textarea>
+            </div>
+            <div class="send-message">
+                <label>Send message</label>
+                <textarea class="send-msg"></textarea>
+            </div>
+            <div class="receive-message">
+                <label>Receive message</label>
+                <textarea></textarea>
+            </div>
+            <button class="send-btn">Send</button>
+            <button class="receive-btn">Receive</button>
+        </div>
+        <!-- End popup section -->
+        <!-- Start Nav bar section -->
+        <nav>
+            <label for="check" class="checkbtn">Menu</label>
+            <input type="checkbox" id="check" value="Menu"/>
+            <label class="ecommerce-name"><i class="fa fa-angle-right"></i><i class="fa fa-grip-lines-vertical"></i><i class="fa fa-angle-left"></i>Double-K</label>
+            <ul>
+                <li><a class="active" href="home-frontend.html">Home</a></li>
+                <li><a href="profile-frontend.html">Profile</a></li>
+                <li>
+                    <div class="search-button">
+                        <i id="search-btn" class="fa fa-search"></i>
+                        <i id="open-search" class="fa fa-arrow-down"></i>
+                        <input type="text" placeholder="Search" id="home-search-btn" ></input>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- End Nav bar section -->
+        <!-- Start header section -->
+        <div id="sub-nav" class="header-section container">
+            <i id="voucher-btn" class="fa fa-credit-card"></i>
+            <p>Voucher</p>
+            <i id="cart-btn" class="fa fa-shopping-cart"></i>
+            <p>Cart</p>
+            <i id="chat-btn" class="fa fa-comment"></i>
+            <p>Chat</p>
+            <i id="logout" class="fa fa-right-from-bracket"></i>
+            <p>Logout</p>
+        </div>
+        <!-- End header section -->
+        <!-- Start item section -->
+        <div class="container">
+            <div id="item-container" class="item-section"></div>
+        </div>
+        <!-- End item section -->
+        <script src="scripts/home-frontend.js"></script>
+        <script src="scripts/retreive-product.js"></script>
+        <script src="scripts/search.js"></script>
+        <script src="scripts/chat.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </body>
+</html>

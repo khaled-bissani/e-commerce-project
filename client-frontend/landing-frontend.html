@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles/landing-frontend.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- ads top section -->
+    <section class="landing-ads-header">
+        <h1>Discount applied at checkout: Get 30% discount on your first order!</h1>
+    </section>
+    <!-- the section where the logo, and sign-in and sign-up -->
+    <section class="actions">
+        <div class="logo-div">
+            <label class="ecommerce-name"><i class="fa fa-angle-right"></i><i class="fa fa-grip-lines-vertical"></i><i class="fa fa-angle-left"></i>Double-K</label>
+        </div>
+        <div class="landing-btn-container">
+            <span class="align-span"></span>
+            <div class="landing-btns-class">
+                <button class="action-btn" id="login-btn">Log In</button>
+                <button class="action-btn" id="signup-btn">Sign-Up</button>
+            </div>
+        </div>
+    </section>
+    <!-- main content section containing the ads and the signin/signup form -->
+    <section class="landing-main">
+        <div class="ads-section">
+            <div class="ads-img-container">
+                <img src="assets/rename.jpg" alt="ads photo">
+            </div>
+            <div class="ad-description">
+                <p>Buy now and get 30% discount on our new release Buy now and get 30% discount on our new release Buy now and get 30% discount on our new release</p>
+            </div>
+        </div>
+        <div class="signup-form-div">
+            <h3>Sign Up</h3>
+            <form class="frm">
+                <input type="text-box" placeholder="Full Name" class="inp" name="fullname" id="fname"><br>
+                <input type="text-box" placeholder="Username" class="inp" name="username" id="username"><br>
+                <input type="email" placeholder="Email: someone@example.com" class="inp" name="email" id="email"><br>
+                <input type="password" placeholder="password" class="inp" name="password" id="password"><br>
+                <input type="password" placeholder="Confirm password" class="inp" name="confirmpassword" id="confirmpassword"><br>
+                <button type="button" class="create-btn" id="signup-form-btn"> Create Account</button>
+                <p>Already have an account? <span class="login-span" id="login-span">Login</span></p>
+            </form>
+        </div>
+        <div class="signin-div no-display">
+            <h3>Sign In</h3>
+            <div id="wrong-info"></div>
+            <form class="frm">
+                <input type="text-box" placeholder="Username" class="inp" name="username" id="username-signin"><br>
+                <input type="password" placeholder="password" class="inp" name="password" id="password-signin"><br>
+                <button type="button" class="create-btn" id="login-form-btn">Log In</button>
+                <p>Don't have an account? <span class="login-span" id="signup-span">Sign Up</span></p>
+            </form>
+        </div>
+    </section>
+    <footer class="landing-footer">
+        <p> &copy;Copy Rights</p>
+    </footer>
+
+    <script src="scripts/landing-frontend.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+</html>
+
