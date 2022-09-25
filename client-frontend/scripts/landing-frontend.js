@@ -122,26 +122,35 @@ function checkLogin(){
         const passwordLogin =localStorage.getItem("login-password");
 
         let enter=false
+        let ban=false
+        let currentUserId=0
         
         axios.post('http://localhost/ecommerce-server/login.php')
                 .then(res => {
                     for(let i=0; i<res.data.length; i++){
-                        console.log(res.data[i].username)
                         if(res.data[i].username == usernameLogin && res.data[i].password==passwordLogin){
-                            enter=true   
+                            currentUserId = res.data[i].id
+                            if (res.data[i].is_banned==0){
+                                enter=true
+                            }
+                            else{
+                                ban=true;
+                            }
                         }}
-                    if(enter){
+                    if (ban){
+                        document.getElementById('wrong-info').style.color = "red";
+                        document.getElementById('wrong-info').innerText = "You are banned!";
+                    }
+                    else if(enter){
                         window.location.replace('home-frontend.html');
                     }
                     else{
                         document.getElementById('wrong-info').style.color = "red";
                         document.getElementById('wrong-info').innerText = "Wrong username or password!";
                     }
-                } 
-                    )
+                })
                 .catch(err => console.log(err))
     }
-    
 }
 
 //calling the fct showLogin() every time a login button is clicked
