@@ -1,16 +1,25 @@
 <?php
 
+header("Access-Control-Allow-Origin:*");
+header("Access-Control-Allow-Headers:*");
+
 include("connection.php");
+$done = false;
 
-$id = $_POST["id"];
+if (
+  isset($_POST["user_id"])
+) {
+  $id = $_POST["user_id"];
+  $query = $mysqli->prepare("DELETE FROM products WHERE id = ?;");
+  $query->bind_param("i", $id);
 
-$query = $mysqli->prepare("DELETE FROM products WHERE id=?");
-$query->bind_param("i", $id);
-$query->execute();
+  if ($query->execute()) {
+    $done = true;
+  }
+}
 
-$response = [];
-$response["success"] = true;
+$result = [
+  "done" => $done,
+];
 
-echo json_encode($response);
-
-?>
+echo json_encode($result);
