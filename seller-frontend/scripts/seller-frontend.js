@@ -1,6 +1,9 @@
 localStorage.setItem('data', 22);
 
-var userInfo = localStorage.getItem('data');
+const userInfo = localStorage.getItem('data');
+
+const home=document.querySelector('#to-home');
+const revenue=document.querySelector('#to-revenue');
 
 const addproduct=document.querySelector('#add-product');
 const editproduct=document.querySelector('#edit-product');
@@ -36,6 +39,19 @@ const erroradd=document.querySelector('#error-add');
 const erroredit=document.querySelector('#error-edit');
 
 const showcategory=document.querySelector('#show-category');
+
+const home_form=document.querySelector('#home');
+const revenue_form=document.querySelector('#revenue');
+
+home.addEventListener('click',()=>{
+    home_form.style.display='block';
+    revenue_form.style.display='none';
+})
+
+revenue.addEventListener('click',()=>{
+    revenue_form.style.display='block';
+    home_form.style.display='none';
+})
 
 addproduct.addEventListener('click',()=>{
     addform.style.display='block';
