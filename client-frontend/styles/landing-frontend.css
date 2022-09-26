@@ -13,7 +13,6 @@ body{
     text-align: center;
     padding: 7px 0;
 }
-
 /* the actions section */
 .actions{
     display: flex;
@@ -37,17 +36,13 @@ label > i:last-child{
     border: solid;
     width: 10%;
 }
-
 .logo-img-container img{
     width: 100%;
 }
-
 .landing-btn-container{
-    flex: 1;
     display: flex;
     margin: 10px 10px;
 }
-
 .align-span{
     flex: 1;
 
@@ -60,6 +55,7 @@ label > i:last-child{
     border-radius: 10px;
     padding: 7px 10px;
     transition-duration: 0.2s;
+    display: none;
 }
 .ecommerce-name{
     color: var(--primary-color);

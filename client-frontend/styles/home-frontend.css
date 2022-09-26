@@ -117,7 +117,7 @@ ul a:hover{
     width: 100%;
     height: 40px;
     margin-top: 80px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     padding-top: 10px;
     background: rgba(179, 179, 179, 0.8);
 }
@@ -133,13 +133,20 @@ ul a:hover{
     top: 0;
     width: 100%;
 }
+/* top ad section */
+.landing-ads-header{
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+    margin-bottom: 40px;
+}
 /* Item */
 .item-section{
     display: flex;
     flex-wrap: wrap;
-    /* width: 90%; */
-    /* background: gray; */
     padding-left: 53px;
+    margin-bottom: 20px;
 }
 .items{
     width: 250px;
@@ -182,6 +189,9 @@ ul a:hover{
     text-align: center;
     padding-left: 30px;
     padding-right: 30px;
+}
+.item-information > p:last-child{
+    font-weight: bold;
 }
 /* .item */
 .yellow-star{
@@ -250,6 +260,38 @@ ul a:hover{
 }
 .share-voucher > i{
     cursor: pointer;
+}
+.chartpopup{
+    background-color: #ffffff;
+    width: 1000px;
+    padding: 30px 40px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 10%;
+    border-radius: 8px;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 200px;
+    overflow-y: auto;
+}
+.chartpopup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    background: var(--primary-color);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.chartpopup h1{
+    margin-bottom: 30px;
 }
 .cart-item{
     display: flex;
