@@ -252,6 +252,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    width: 50%;
+    border: 2px solid grey;
+    border-radius: 20px;
 }
 .chat-container1 label{
     font-size: 25px;
@@ -351,6 +355,10 @@
 
     .product-item{
         width: 50%;
+    }
+
+    .chat-container1{
+        width: 90%;
     }
 }
 
